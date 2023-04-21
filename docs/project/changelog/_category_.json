@@ -1,0 +1,8 @@
+{
+  "label": "Changelog",
+  "position": 2,
+  "className": "su-category-header",
+  "link": {
+    "type": "generated-index"
+  }
+}
