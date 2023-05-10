@@ -1,41 +1,19 @@
-# Website
+# <img src="https://raw.githubusercontent.com/secutils-dev/secutils/main/assets/logo/secutils-logo-initials.png" alt="Secutils.dev" width="22"> [Secutils.dev](https://secutils.dev) Documentation &middot; [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://github.com/secutils-dev/secutils-docs/blob/main/LICENSE) [![Build Status](https://github.com/secutils-dev/secutils-docs/actions/workflows/ci.yml/badge.svg)](https://github.com/secutils-dev/secutils-docs/actions)
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+The document website for Secutils.dev, refer to [secutils-dev/secutils](https://github.com/secutils-dev/secutils) for more details.
 
-### Installation
+__NOTE:__ The project isn't yet ready for general consumption. Please stay tuned for updates!
 
-```
-$ yarn
-```
+## Getting Started
 
-### Local Development
+***In progress…***
 
-```
-$ yarn start
-```
+## Documentation
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+***In progress…***
 
-### Build
+## Community
 
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- ❓ Ask questions on [GitHub Discussions](https://github.com/secutils-dev/secutils/discussions)
+- 🐛 Report bugs on [GitHub Issues](https://github.com/secutils-dev/secutils/issues)
+- 📣 Stay up to date on new features and announcements on [Twitter](https://twitter.com/secutils) or [Mastodon](https://fosstodon.org/@secutils)
