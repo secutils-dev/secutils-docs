@@ -19,6 +19,8 @@ const config = {
   markdown: { mermaid: true },
   themes: ['@docusaurus/theme-mermaid'],
 
+  scripts: [{ src: '/js/script.js', async: true, defer: true, 'data-domain': 'secutils.dev' }],
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
 
