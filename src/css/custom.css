@@ -195,7 +195,3 @@ a:hover {
 .su-table td:last-child code {
   white-space: pre-wrap;
 }
-
-.su-category-header {
-  font-weight: 500;
-}
