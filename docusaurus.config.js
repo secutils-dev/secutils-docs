@@ -109,8 +109,8 @@ const config = {
       },
       colorMode: {
         disableSwitch: false,
-        // respectPrefersColorScheme: true,
-        defaultMode: 'dark',
+        respectPrefersColorScheme: false,
+        defaultMode: 'light',
       },
     })
 };
