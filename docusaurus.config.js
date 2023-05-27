@@ -4,12 +4,14 @@
 const lightTheme = require('prism-react-renderer/themes/vsLight');
 const darkTheme = require('prism-react-renderer/themes/vsDark');
 
+const URL = process.env.SECUTILS_URL ?? 'https://secutils.dev';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Secutils.dev Docs',
   tagline: 'Documentation, user guides, and more...',
   favicon: 'img/favicon.ico',
-  url: 'https://secutils.dev',
+  url: URL,
   baseUrl: '/docs/',
   baseUrlIssueBanner: true,
 
@@ -18,6 +20,7 @@ const config = {
 
   markdown: { mermaid: true },
   themes: ['@docusaurus/theme-mermaid'],
+  plugins: ['docusaurus-plugin-sass'],
 
   scripts: [{ src: '/js/script.js', async: true, defer: true, 'data-domain': 'secutils.dev' }],
 
@@ -34,7 +37,7 @@ const config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -42,9 +45,18 @@ const config = {
           routeBasePath: '/',
           editUrl: 'https://github.com/secutils-dev/secutils-docs/tree/main/',
         },
-        blog: false,
+        blog: {
+          blogTitle: 'Secutils.dev Blog',
+          blogDescription: 'Secutils.dev Blog',
+          postsPerPage: 6,
+          feedOptions: {
+            type: 'all',
+            title: 'Secutils.dev Blog',
+            copyright: `Copyright © ${new Date().getFullYear()} Secutils.dev`,
+          },
+        },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/scss/index.scss'),
         },
       }),
     ],
@@ -60,20 +72,28 @@ const config = {
       },
       navbar: {
         logo: {
-          alt: 'Secutils.dev',
+          alt: 'Navigate to Secutils.dev',
           src: 'img/logo.svg',
           srcDark: 'img/logo_dark.svg',
+          target: '_self',
           height: 24,
           width: 147,
-          href: '/docs',
+          href: URL,
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docsSidebar',
             position: 'left',
             label: 'Docs',
-            className: 'su-navbar-breadcrumb'
+            to: '/docs',
+            className: 'su-navbar-breadcrumb su-navbar-docs'
+          },
+          {
+            sidebarId: 'blogSidebar',
+            position: 'left',
+            label: 'Blog',
+            to: '/blog',
+            className: 'su-navbar-breadcrumb su-navbar-blog'
           },
           {
             type: 'html',
@@ -86,19 +106,23 @@ const config = {
         links: [
           {
             label: 'About',
-            href: 'https://secutils.dev/about',
+            href: `${URL}/about`,
           },
           {
-            label: 'Roadmap',
-            href: 'https://github.com/orgs/secutils-dev/projects/1',
+            label: 'Blog',
+            href: '/blog',
+          },
+          {
+            label: 'Documentation',
+            href: '/docs',
           },
           {
             label: 'Privacy',
-            href: 'https://secutils.dev/privacy',
+            href: `${URL}/privacy`,
           },
           {
             label: 'Terms',
-            href: 'https://secutils.dev/terms',
+            href: `${URL}/terms`,
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Secutils.dev`,
