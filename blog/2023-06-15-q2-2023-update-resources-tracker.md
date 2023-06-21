@@ -12,7 +12,7 @@ As the end of "Q2 2023 - Apr-Jun" milestone (that's how I structure [my roadmap]
 
 <!--truncate-->
 
-![Resources scrapper](https://secutils.dev/docs/img/blog/2023-06-15_resources_trackers.png)
+![Resources trackers](https://secutils.dev/docs/img/blog/2023-06-15_resources_trackers.png)
 
 Imagine you're developing a web page, and after you deploy it, you accidentally notice that it requires some scripts or stylesheets that you didn't expect. Or perhaps it stops requiring something that used to be essential for your application. In most cases, it's probably due to a broken production build or deployment pipeline. However, it could also be an indicator that a malicious actor has successfully compromised your web page and modified it to require resources needed to attack your users. It could be a stored XSS or a supply chain attack, among others.
 
