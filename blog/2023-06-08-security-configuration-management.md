@@ -4,7 +4,7 @@ description: "Security configuration management for software engineers: content 
 slug: security-configuration-management
 authors: azasypkin
 image: https://secutils.dev/docs/img/blog/2023-06-08_csp_create.png
-tags: [thoughts, application-security]
+tags: [thoughts, guides, application-security]
 ---
 In my previous posts, I have consistently emphasized the importance of improving efficiency and reducing waste, whether it's time, money, or energy. This concept has become a central theme in several projects I am currently involved in, including Secutils.dev. Today, I want to share my thoughts on security configuration management and how Secutils.dev and similar tools can enhance efficiency in this area by empowering software engineers, who are responsible for designing and implementing security configurations.
 
