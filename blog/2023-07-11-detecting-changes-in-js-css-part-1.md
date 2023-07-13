@@ -96,7 +96,7 @@ Considering that most users are primarily interested in just detecting unexpecte
 
 ## Conclusion
 
-In this post, I have covered the most obvious challenges you may encounter when tracking changes in web page resources. In the next part of this post, I will dive into more intricate and less obvious challenges, such as dealing with `blob:` and `data:` resources, and applying malware detection techniques to handle pesky resources that change with every page load. Stay tuned!
+In this post, I have covered the most obvious challenges you may encounter when tracking changes in web page resources. [**In the next part**](https://secutils.dev/docs/blog/detecting-changes-in-js-css-part-2) of this post, I will dive into more intricate and less obvious challenges, such as dealing with `blob:` and `data:` resources, and applying malware detection techniques to handle pesky resources that change with every page load. Stay tuned!
 
 ---
 
