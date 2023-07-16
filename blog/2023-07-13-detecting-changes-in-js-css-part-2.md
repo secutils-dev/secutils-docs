@@ -14,7 +14,7 @@ In the previous part, I talked about handling inline and external resources, dea
 
 <!--truncate-->
 
-## Challenge #4: Data and data URLs
+## Challenge #4: Data and blob URLs
 
 Distinguishing between inline and external resources is usually straightforward based on the presence of the `src` attribute in `<script>` elements or the use of separate `<link[rel=stylesheet]>` elements for external CSS resources. As I mentioned in the previous post, to obtain the content of external JavaScript and CSS resources, I leverage Playwright's capability to intercept network requests. However, not all seemingly external resources are genuinely external!
 
