@@ -129,7 +129,8 @@ const config = {
       },
       prism: {
         theme: lightTheme,
-        darkTheme: darkTheme
+        darkTheme: darkTheme,
+        additionalLanguages: ['rust'],
       },
       colorMode: {
         disableSwitch: false,
