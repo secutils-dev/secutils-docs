@@ -85,7 +85,7 @@ Fuzzy hashing is indeed a perfect solution for our use case, allowing us to dete
 
 ## Conclusion
 
-In this post, I have highlighted a few more challenges you may encounter when tracking changes in web page resources. However, I realized that I couldn't cover everything I wanted to share in just two parts. So, stay tuned for the third and final part, where I will explore the **security-oriented** (finally!) aspects of web page resource tracking. Stay tuned for more insights!
+In this post, I have highlighted a few more challenges you may encounter when tracking changes in web page resources. However, I realized that I couldn't cover everything I wanted to share in just two parts. So, stay tuned for [**the third and final part**](https://secutils.dev/docs/blog/detecting-changes-in-js-css-part-3), where I will explore the **security-oriented** (finally!) aspects of web page resource tracking. Stay tuned for more insights!
 
 ---
 
