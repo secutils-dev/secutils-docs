@@ -3,7 +3,7 @@ title: Announcing 1.0.0-alpha.2 release
 description: "Announcing 1.0.0-alpha.2 release: web page resources tracker, bug fixes, enhancements and more."
 slug: alpha2-release
 authors: azasypkin
-image: https://secutils.dev/docs/img/blog/goalpng
+image: https://secutils.dev/docs/img/blog/goal.png
 tags: [announcement, release, thoughts]
 ---
 
