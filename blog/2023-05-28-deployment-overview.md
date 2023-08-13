@@ -83,4 +83,4 @@ Although deploying to Kubernetes may seem complex initially, it offers significa
 
 ---
 
-That concludes today's post. Thank you for reading! In the upcoming posts, I will cover the [**tools I use to monitor**](/blog/2023-05-30-usage-analytics-and-monitoring.md) the production environment, and [**how I optimize costs**](/blog/2023-06-01-running-micro-saas-for-less-than-one-euro-a-month.md). If it sounds interesting to you, feel free to follow me on [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), or [**LinkedIn**](https://www.linkedin.com/in/azasypkin).
+That wraps up today's post. Thanks for taking the time to read it! If my posts sound interesting to you, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).

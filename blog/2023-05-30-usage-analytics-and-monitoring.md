@@ -71,4 +71,4 @@ Although I'm currently utilizing only the basic functionalities of the Elastic S
 
 ---
 
-That concludes today's post. Thank you for reading! In my next post, I'll be sharing [**my insights on optimizing costs and successfully running Secutils.dev for less than 1€ a month**](/blog/2023-06-01-running-micro-saas-for-less-than-one-euro-a-month.md). Stay tuned for some cost-saving tips and tricks! If it sounds interesting to you, feel free to follow me on [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), or [**LinkedIn**](https://www.linkedin.com/in/azasypkin).
+That wraps up today's post. Thanks for taking the time to read it! If my posts sound interesting to you, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
