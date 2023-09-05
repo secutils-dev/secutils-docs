@@ -137,6 +137,10 @@ While there are startup programs available that offer many of the required tools
 
 Overall, the combination of free services and the minimal cost of the domain name makes it possible to bootstrap indie projects like Secutils.dev with a very low budget, as long as you're comfortable with taking ownership of all the technical and operational challenges involved.
 
----
+That wraps up today's post, thanks for taking the time to read it!
 
-That wraps up today's post. Thanks for taking the time to read it! If my posts sound interesting to you, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+:::info ASK
+If you found this post helpful or interesting, please consider showing your support by starring [**secutils-dev/secutils**](https://github.com/secutils-dev/secutils) GitHub repository. Also, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+
+Thank you for being a part of the community!
+:::

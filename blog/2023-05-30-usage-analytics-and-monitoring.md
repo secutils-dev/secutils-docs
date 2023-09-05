@@ -69,6 +69,10 @@ This monitoring setup provides me with the ability to not only identify when my 
 
 Although I'm currently utilizing only the basic functionalities of the Elastic Stack, I have plans to expand its usage over time. Specifically, I intend to employ Elastic APM (Application Performance Monitoring) to monitor the performance of Secutils.dev components. Additionally, I'm interested in utilizing Elastic Machine Learning to detect anomalies in user behavior and identify unusual patterns or suspicious activities, enhancing the security of Secutils.dev.
 
----
+That wraps up today's post, thanks for taking the time to read it!
 
-That wraps up today's post. Thanks for taking the time to read it! If my posts sound interesting to you, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+:::info ASK
+If you found this post helpful or interesting, please consider showing your support by starring [**secutils-dev/secutils**](https://github.com/secutils-dev/secutils) GitHub repository. Also, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+
+Thank you for being a part of the community!
+:::

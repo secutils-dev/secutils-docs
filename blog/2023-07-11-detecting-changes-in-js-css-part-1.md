@@ -98,6 +98,10 @@ Considering that most users are primarily interested in just detecting unexpecte
 
 In this post, I have covered the most obvious challenges you may encounter when tracking changes in web page resources. [**In the next part**](https://secutils.dev/docs/blog/detecting-changes-in-js-css-part-2) of this post, I will dive into more intricate and less obvious challenges, such as dealing with `blob:` and `data:` resources, and applying malware detection techniques to handle pesky resources that change with every page load. Stay tuned!
 
----
+That wraps up today's post, thanks for taking the time to read it!
 
-That wraps up today's post. Thanks for taking the time to read it! If my posts sound interesting to you, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+:::info ASK
+If you found this post helpful or interesting, please consider showing your support by starring [**secutils-dev/secutils**](https://github.com/secutils-dev/secutils) GitHub repository. Also, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+
+Thank you for being a part of the community!
+:::

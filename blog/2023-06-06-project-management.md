@@ -61,6 +61,10 @@ In addition to GitHub, I also utilize a dedicated Secutils.dev “space” in No
 
 In conclusion, whether a one-man project needs formal project management depends on various factors. For short-lived or hobby projects, as well as early prototypes, formal project management may not be helpful and could even be harmful. However, for more complex projects like Secutils.dev that span months or longer, adopting a formal process can be beneficial. Fortunately, there are many free tools available today, such as GitHub Projects and Notion, that can assist in project management.
 
----
+That wraps up today's post, thanks for taking the time to read it!
 
-That wraps up today's post. Thanks for taking the time to read it! If my posts sound interesting to you, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+:::info ASK
+If you found this post helpful or interesting, please consider showing your support by starring [**secutils-dev/secutils**](https://github.com/secutils-dev/secutils) GitHub repository. Also, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+
+Thank you for being a part of the community!
+:::

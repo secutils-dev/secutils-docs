@@ -81,6 +81,10 @@ When preparing to deploy a new version to the production environment, I follow a
 
 Although deploying to Kubernetes may seem complex initially, it offers significant advantages in terms of deployment control, orchestration, and scalability. In this post, I had to omit some of the finer details to maintain readability. However, if you have any specific questions about the deployment of Secutils.dev, please feel free to leave a comment, and I'll be more than happy to provide detailed answers and insights!
 
----
+That wraps up today's post, thanks for taking the time to read it!
 
-That wraps up today's post. Thanks for taking the time to read it! If my posts sound interesting to you, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+:::info ASK
+If you found this post helpful or interesting, please consider showing your support by starring [**secutils-dev/secutils**](https://github.com/secutils-dev/secutils) GitHub repository. Also, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+
+Thank you for being a part of the community!
+:::

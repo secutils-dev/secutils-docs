@@ -34,5 +34,10 @@ I've highlighted just a handful of the most noticeable differences in handling s
 
 Unfortunately, we currently lack effective tools capable of accurately identifying vulnerabilities as false positives, a situation that wastes significant time and resources across the industry, possibly amounting to millions or billions of dollars. The field is ripe for innovation, no doubt, and with the emergence of AI-powered developer tools, I'm genuinely optimistic about the future!
 
----
-That wraps up today's post. Thanks for taking the time to read it! If my posts sound interesting to you, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+That wraps up today's post, thanks for taking the time to read it!
+
+:::info ASK
+If you found this post helpful or interesting, please consider showing your support by starring [**secutils-dev/secutils**](https://github.com/secutils-dev/secutils) GitHub repository. Also, feel free to follow me on [**Twitter**](https://twitter.com/aleh_zasypkin), [**Mastodon**](https://infosec.exchange/@azasypkin), [**LinkedIn**](https://www.linkedin.com/in/azasypkin/), [**Indie Hackers**](https://www.indiehackers.com/azasypkin/history), or [**Dev Community**](https://dev.to/azasypkin).
+
+Thank you for being a part of the community!
+:::
