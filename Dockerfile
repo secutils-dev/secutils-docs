@@ -13,7 +13,7 @@ COPY ["./docs", "./docs"]
 COPY ["./blog", "./blog"]
 RUN set -x && yarn build
 
-FROM nginx:stable-alpine
+FROM nginx:alpine3.18-slim
 COPY --from=UI_BUILDER ["/app/build/", "/usr/share/nginx/html/docs"]
 COPY ["./config/nginx.conf", "/etc/nginx/conf.d/default.conf"]
 
