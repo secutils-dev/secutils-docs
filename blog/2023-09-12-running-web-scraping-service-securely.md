@@ -44,7 +44,7 @@ Running an entire browser is a resource-intensive operation, even if it’s [**a
 
 To address this, consider running the component that spawns the browser within a separate container. This approach not only better protects your business-critical functionality but also allows you to scale up or down your browser-specific service independently.
 
-Additionally, try to explicitly limit the resources available to the container using techniques like [**control groups**](https://en.wikipedia.org/wiki/Cgroups) or similar features that suit your environment. For instance, if you’re running your container in Kubernetes, you can ****limit resources**** available to that container using configurations such as this:
+Additionally, try to explicitly limit the resources available to the container using techniques like [**control groups**](https://en.wikipedia.org/wiki/Cgroups) or similar features that suit your environment. For instance, if you’re running your container in Kubernetes, you can [**limit resources**](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) available to that container using configurations such as this:
 ```yaml
 apiVersion: v1
 kind: Pod
