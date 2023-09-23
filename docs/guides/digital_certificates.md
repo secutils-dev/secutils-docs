@@ -22,6 +22,7 @@ In this guide you'll create a template for generating a private key and self-sig
 <tbody>
 <tr><td><b>Name</b></td><td><pre>https-server</pre></td></tr>
 <tr><td><b>Key algorithm</b></td><td><pre>RSA</pre></td></tr>
+<tr><td><b>Key size</b></td><td><pre>2048 bit</pre></td></tr>
 <tr><td><b>Signature algorithm</b></td><td><pre>SHA-256</pre></td></tr>
 <tr><td><b>Certificate type</b></td><td><pre>End Entity</pre></td></tr>
 <tr><td><b>Key usage</b></td><td><pre>Key encipherment, Digital signature</pre></td></tr>
@@ -111,6 +112,7 @@ In this guide, you will generate a private key in PKCS#8 format and then export 
 <tbody>
 <tr><td><b>Name</b></td><td><pre>jwk</pre></td></tr>
 <tr><td><b>Key algorithm</b></td><td><pre>ECDSA</pre></td></tr>
+<tr><td><b>Curve name</b></td><td><pre>secp384r1 / NIST P-384</pre></td></tr>
 <tr><td><b>Signature algorithm</b></td><td><pre>SHA-256</pre></td></tr>
 <tr><td><b>Certificate type</b></td><td><pre>End Entity</pre></td></tr>
 </tbody>
