@@ -263,6 +263,7 @@ document.body.insertAdjacentHTML(
 
 15. Finally, navigate to [Web Scraping → Resources Trackers](https://secutils.dev/ws/web_scraping__resources) and expand the `Demo` tracker's row
 16. Click **Fetch resources** button to fetch the next revision of the web page resources
+
 :::caution NOTE
 Normally, Secutils.dev caches web page resources for **10 minutes**. This means that if you make changes to the web page resources and want to see them reflected in the tracker, you'll need to wait for 10 minutes before re-fetching resources. However, for this guide, I've disabled caching for the tracker so that you can see changes immediately.
 :::
@@ -299,8 +300,10 @@ In this guide, you will create a web page resource tracker for the Reddit home p
 </tbody>
 </table>
 
-:::caution NOTE
-Normally, Secutils.dev caches web page resources for **10 minutes**. This means that if you make changes to the web page resource tracker and want to see them take effect, you'll need to wait for 10 minutes before re-fetching resources. However, for this guide, I'm adding an arbitrary `?rev=X` query string parameter to the URL to bypass caching and see the changes immediately.
+:::tip TIP
+Normally, Secutils.dev caches web page resources for **10 minutes**. This means that if you make changes to the web page resource tracker and want to see them take effect, you'll need to wait for 10 minutes before re-fetching resources. However, for this guide, I'm adding an arbitrary `?rev=X` query string parameter to the URL to bypass caching and see the changes immediately. This trick can be quite handy when you are setting up a new tracker and need to fine-tune its configuration. 
+
+Note that every time you change the tracker's URL, all previously fetched resources **will be removed**.
 :::
 
 3. Click on the **Save** button to save the tracker
