@@ -208,8 +208,14 @@ Source: removed.js
 <tbody>
 <tr><td><b>Name</b></td><td><pre>Demo</pre></td></tr>
 <tr><td><b>URL</b></td><td><pre>https://secutils.dev/api/webhooks/ar/<b>[YOUR UNIQUE ID]</b>/track-me.html</pre></td></tr>
+<tr><td><b>Frequency</b></td><td><pre>Daily</pre></td></tr>
+<tr><td><b>Notifications</b></td><td><pre>☑️</pre></td></tr>
 </tbody>
 </table>
+
+:::tip TIP
+Configured tracker will fetch the resources of the `track-me.html` responder once a day and notify you if any changes are detected. You can change the frequency and notification settings to suit your needs.
+:::
 
 9. Click on the **Save** button to save the tracker
 10. Once the tracker is set up, it will appear in the trackers grid
@@ -278,3 +284,123 @@ Watch the video demo below to see all the steps mentioned earlier in action:
   <source src="../../video/guides/web_scraping_resources_tracker_diff.webm" type="video/webm" />
   <source src="../../video/guides/web_scraping_resources_tracker_diff.mp4" type="video/mp4" />
 </video>
+
+## Filter resources with a web page resources tracker
+
+In this guide, you will create a web page resource tracker for the Reddit home page and learn how to track only specific resources:
+
+1. Navigate to [Web Scraping → Resources Trackers](https://secutils.dev/ws/web_scraping__resources) and click **Track resources** button
+2. Configure a new tracker with the following values:
+
+<table class="su-table">
+<tbody>
+<tr><td><b>Name</b></td><td><pre>Reddit</pre></td></tr>
+<tr><td><b>URL</b></td><td><pre>https://reddit.com/<b>?rev=1</b></pre></td></tr>
+</tbody>
+</table>
+
+:::caution NOTE
+Normally, Secutils.dev caches web page resources for **10 minutes**. This means that if you make changes to the web page resource tracker and want to see them take effect, you'll need to wait for 10 minutes before re-fetching resources. However, for this guide, I'm adding an arbitrary `?rev=X` query string parameter to the URL to bypass caching and see the changes immediately.
+:::
+
+3. Click on the **Save** button to save the tracker
+4. Once the tracker is set up, it will appear in the trackers grid
+5. Expand the tracker's row and click on the **Fetch resources** button to make the first snapshot of the web page resources
+6. Once the tracker has fetched the resources, they will appear in the resources grid. You'll notice that there are nearly two hundred resources used for the Reddit home page! In the case of large and complex pages like this one, it's recommended to have multiple separate trackers, e.g. one per logical functionality domain, to avoid overwhelming the developer with too many resources and consequently changes they might need to track. Let's say we're only interested in resources that are used for the Single-Sign-On (SSO) functionality.
+7. To filter out all resources that are not related to SSO, we'll use the `Resource filter/mapper` feature. Click on the pencil icon next to the tracker's name to edit the tracker and update the following properties:
+
+<table class="su-table">
+<tbody>
+<tr><td><b>URL</b></td><td><pre>https://reddit.com/<b>?rev=2</b></pre></td></tr>
+<tr>
+    <td><b>Resource filter/mapper</b></td>
+<td>
+
+```javascript
+return resource.url?.includes('sso')
+  ? resource
+  : null;
+```
+</td>
+</tr>
+</tbody>
+</table>
+
+8. The **Resource filter/mapper** property accepts a JavaScript function that is executed for each resource detected by the tracker. The function receives a single `resource` argument, which is the resource object. The function must return either the resource object or `null`. If the function returns `null`, the resource will be filtered out and will not be tracked. In our case, we're filtering out all resources that do not contain sso in their URL. You can learn more about resource filter/mapper scripts in the [**Annex: Resource filter/mapper script examples**](#annex-resource-filtermapper-script-examples) section.
+9. Now, click on the **Save** button to save the tracker.
+10. Click the **Fetch resources** button to re-fetch web page resources. Once the tracker has re-fetched resources, only a couple of resources with `sso` in the URL will appear in the resources grid.
+
+Watch the video demo below to see all the steps mentioned earlier in action:
+
+<video controls preload="metadata" width="100%">
+  <source src="../../video/guides/web_scraping_resources_tracker_filter.webm" type="video/webm" />
+  <source src="../../video/guides/web_scraping_resources_tracker_filter.mp4" type="video/mp4" />
+</video>
+
+## Annex: Resource filter/mapper script examples
+
+In this section, you can find examples of resource filter and mapper scripts that you can use to filter out or map resources based on various criteria. The script essentially defines a function that is executed for each resource detected by the tracker and receives a single `resource` argument, which is the resource object. The function must return either the resource object or `null`. If the function returns `null`, the resource will be filtered out and will not be tracked. 
+
+The `resource` argument has the following interface:
+
+```typescript
+export interface Resource {
+  // Resource full URL. This property is not defined for inline resources. 
+  url?: string;
+  // Resource content.
+  data: string;
+  // Resource type.
+  type: 'script' | 'stylesheet';
+}
+```
+
+### Track only external resources
+
+```javascript
+return resource.url?.startsWith('http')
+  ? resource
+  : null;
+```
+
+### Track only inline resources
+
+```javascript
+return !resource.url
+  ? resource
+  : null;
+```
+
+### Track only JavaScript resources
+
+```javascript
+return resource.type === 'script'
+  ? resource
+  : null;
+```
+
+### Track only CSS resources
+
+```javascript
+return resource.type === 'stylesheet'
+  ? resource
+  : null;
+```
+
+### Strip query string parameters from resource URLs
+Sometimes, resources such as analytics and user tracking scripts load with unique query string parameters, even when the content of the resource remains constant. This can lead to confusion for the tracker and trigger unwanted change notifications. To address this, you can strip query string parameters from the URLs of such resources before calculating the resource fingerprint:
+
+```javascript
+const isInlineResource = !resource.url;
+if (isInlineResource) {
+    return resource
+}
+
+const isGoogleAnalyticsResource = resource.url.includes('googletagmanager');
+if (!isGoogleAnalyticsResource) {
+    return resource
+}
+
+// Strip query string parameters from Google Analytics resource URLs.
+const [urlWithoutQueryString] = resource.url.split('?');
+return { ...resource, url: urlWithoutQueryString };
+```
