@@ -2,6 +2,11 @@
   "name": "secutils-docs",
   "version": "1.0.0-alpha.4",
   "private": true,
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --host 0.0.0.0 --port 7373",
@@ -25,8 +30,11 @@
     "sass": "^1.68.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
     "@docusaurus/module-type-aliases": "^2.4.3",
     "@tsconfig/docusaurus": "^2.0.1",
+    "husky": "^8.0.3",
     "typescript": "^5.2.2"
   },
   "browserslist": {
