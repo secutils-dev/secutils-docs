@@ -5,13 +5,13 @@ ARG SECUTILS_URL=https://secutils.dev
 ENV SECUTILS_URL $SECUTILS_URL
 
 WORKDIR /app
-COPY ["./*.json", "./yarn.lock", "./*.config.js", "./sidebars.js", "./"]
-RUN set -x && yarn install
+COPY ["./*.json", "./*.config.js", "./sidebars.js", "./"]
+RUN set -x && npm ci
 COPY ["./src", "./src"]
 COPY ["./static", "./static"]
 COPY ["./docs", "./docs"]
 COPY ["./blog", "./blog"]
-RUN set -x && yarn build
+RUN set -x && npm run build
 
 FROM nginxinc/nginx-unprivileged:alpine3.18-slim
 COPY --from=UI_BUILDER ["/app/build/", "/usr/share/nginx/html/docs"]

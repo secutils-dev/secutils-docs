@@ -27,7 +27,7 @@
     "docusaurus-plugin-sass": "^0.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.68.0"
+    "sass": "^1.69.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
@@ -36,6 +36,10 @@
     "@tsconfig/docusaurus": "^2.0.1",
     "husky": "^8.0.3",
     "typescript": "^5.2.2"
+  },
+  "overrides": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "browserslist": {
     "production": [
