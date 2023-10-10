@@ -68,7 +68,7 @@ Each component of Secutils.dev has its own Git repository, and within each repos
 # syntax=docker/dockerfile:1
 FROM --platform=$BUILDPLATFORM node:20-alpine3.17 as UI_BUILDER
 ...
-RUN set -x && yarn build
+RUN set -x && npm run build
 
 FROM nginx:stable-alpine
 COPY --from=UI_BUILDER ["/app/dist/", "/usr/share/nginx/html/"]
