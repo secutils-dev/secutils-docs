@@ -12,7 +12,7 @@ Today, I'd like to show you how you can leverage the ["Webhooks" feature](https:
 
 <!--truncate-->
 
-For our exploration, we'll be using [Notion](https://notion.so/) as our target. Notion has an extensive API surface, but I'm particularly interested in how it handles the embedding of external content, such as links, images, and other web pages.
+For our exploration, we'll be using [Notion](https://www.notion.so/) as our target. Notion has an extensive API surface, but I'm particularly interested in how it handles the embedding of external content, such as links, images, and other web pages.
 
 I'm an avid user of Notion. — it's my go-to tool for everything. I collect numerous links within Notion and heavily rely on their "Web Bookmark" functionality, which provides neat previews and allows me to navigate through the links quickly.
 

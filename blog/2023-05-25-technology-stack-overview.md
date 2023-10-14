@@ -61,7 +61,7 @@ To accomplish this, instead of relying on SQLite's built-in full-text search cap
 
 When it comes to testing in Rust, there's not much to say except that it's a breeze! Writing tests in Rust is straightforward, thanks to the built-in testing framework provided by the language. Most of the time, running `cargo test` is all you need to validate your code.
 
-However, I'd like to highlight a fantastic testing library called [**Insta**](https://crates.io/crates/insta). Insta is a snapshot testing library for Rust that brings the power of snapshot testing, similar to Jest, to the Rust ecosystem. If you're familiar with Jest snapshot testing, you'll appreciate how useful snapshots can be in unit tests.
+However, I'd like to highlight a fantastic testing library called [**Insta**](https://github.com/mitsuhiko/insta). Insta is a snapshot testing library for Rust that brings the power of snapshot testing, similar to Jest, to the Rust ecosystem. If you're familiar with Jest snapshot testing, you'll appreciate how useful snapshots can be in unit tests.
 
 ## Frontend
 
@@ -75,7 +75,7 @@ Both React and Parcel, a zero-configuration build tool, offer excellent support 
 
 ### Web UI Framework
 
-With the abundance of Web UI frameworks available today, I wanted to make a practical choice that would allow me to leverage my existing knowledge and meet the specific requirements of Secutils.dev. Rather than investing time in learning a new framework, I decided to work with a framework that I was already familiar with and confident would suit my needs: [**Elastic UI**](https://elastic.github.io/eui).
+With the abundance of Web UI frameworks available today, I wanted to make a practical choice that would allow me to leverage my existing knowledge and meet the specific requirements of Secutils.dev. Rather than investing time in learning a new framework, I decided to work with a framework that I was already familiar with and confident would suit my needs: [**Elastic UI**](https://eui.elastic.co/).
 
 It's worth mentioning that I have a personal connection to Elastic UI as I work for Elastic and know the team behind the framework. This familiarity gives me an added level of confidence in its capabilities and reliability.
 

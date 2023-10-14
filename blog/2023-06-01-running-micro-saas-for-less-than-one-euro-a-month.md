@@ -46,7 +46,7 @@ To minimize build times, I make extensive use of Cargo and `npm` caches between 
 
 **Cost:** 0€ / month
 
-**Vendor:** [**Oracle (Oracle Cloud Infrastructure)**](https://www.oracle.com/cloud)
+**Vendor:** [**Oracle (Oracle Cloud Infrastructure)**](https://www.oracle.com/cloud/)
 
 As I discussed in my previous post, [**Technology stack overview**](/blog/2023-05-25-technology-stack-overview.md), Secutils.dev comprises various components built on different technologies, each with its own resource requirements. When it came to choosing a hosting solution, I found Kubernetes to be the most suitable tool for the job.
 
@@ -87,7 +87,7 @@ I want to highlight that once Secutils.dev becomes profitable, supporting the sm
 
 **Cost:** 0€ / month
 
-**Vendor:** [**Oracle (Oracle Cloud Infrastructure)**](https://www.oracle.com/cloud)
+**Vendor:** [**Oracle (Oracle Cloud Infrastructure)**](https://www.oracle.com/cloud/)
 
 No matter what type of product you're building, you will likely need to handle sensitive information and secrets such as master keys, API keys for third-party integrations, and passwords. Storing these secrets in private Git repositories is not recommended, and it's generally preferred to use a secure vault solution.
 
@@ -105,7 +105,7 @@ Gone are the days when you were required to pay for TLS certificates for your we
 
 **Cost:** 0€ / month
 
-**Vendor:** [**Oracle (Oracle Cloud Infrastructure)**](https://www.oracle.com/cloud)
+**Vendor:** [**Oracle (Oracle Cloud Infrastructure)**](https://www.oracle.com/cloud/)
 
 At the current stage of Secutils.dev, the storage requirements are minimal, and the 200 GB of block volume storage included in the [**Oracle Cloud Free Tier**](https://www.oracle.com/cloud/free/#always-free) is more than sufficient.
 
@@ -115,7 +115,7 @@ Additionally, the free tier includes 20 GB of Object Storage, which I utilize fo
 
 **Cost:** 0€ / month
 
-**Vendor:** [**Oracle (Oracle Cloud Infrastructure)**](https://www.oracle.com/cloud) and [**Zoho**](https://www.zoho.com/mail/zohomail-pricing.html)
+**Vendor:** [**Oracle (Oracle Cloud Infrastructure)**](https://www.oracle.com/cloud/) and [**Zoho**](https://www.zoho.com/mail/zohomail-pricing.html)
 
 Within the [**Oracle Cloud Free Tier**](https://www.oracle.com/cloud/free/#always-free), an Email Delivery Service is available, allowing me to send up to 3000 emails per day for free. While I don't currently send a significant number of transactional emails to Secutils.dev users, it's great to have such a tool at my disposal.
 

@@ -42,7 +42,7 @@ Lastly, I write publicly to share my thoughts and ideas to receive feedback. In 
 
 However, the easiest post for me to write, which essentially offered a "something for nothing" scheme — ["Running a micro-SaaS for less than 1€ a month"](https://secutils.dev/docs/blog/running-micro-saas-for-less-than-one-euro-a-month) — attracted a larger audience. Interestingly, the posts with the fewest readers provided the most valuable feedback. I believe this is because the readers who were willing to invest their time in reading and digesting non-trivial information also had a lot to share on the topic.
 
-![[Secutils.dev](http://Secutils.dev) blog statistics](https://secutils.dev/docs/img/blog/2023-06-20_readers_stat.png)
+![[Secutils.dev](https://Secutils.dev) blog statistics](https://secutils.dev/docs/img/blog/2023-06-20_readers_stat.png)
 
 That wraps up today's post, thanks for taking the time to read it!
 

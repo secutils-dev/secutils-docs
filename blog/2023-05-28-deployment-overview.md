@@ -36,7 +36,7 @@ All components of Secutils.dev have their own distinct scope and evolve independ
 
 Most of the components, except for the API server, primarily serve static resources and do not require significant computing power. These components can be effectively delegated to content delivery networks (CDNs) to enhance performance and scalability. On the other hand, the API server may need more flexible scaling mechanisms to handle potential increases in demand (🤞).
 
-Given that I was already managing a self-hosted Kubernetes cluster in Oracle Cloud (which I will discuss in more detail in one of my next posts), I decided to deploy the Secutils.dev components as [**separate Kubernetes pods**](https://kubernetes.io/docs/concepts/workloads/pods). This allows for efficient traffic routing using Traefik Ingress rules, ensuring that requests are directed to the appropriate pods based on the URL:
+Given that I was already managing a self-hosted Kubernetes cluster in Oracle Cloud (which I will discuss in more detail in one of my next posts), I decided to deploy the Secutils.dev components as [**separate Kubernetes pods**](https://kubernetes.io/docs/concepts/workloads/pods/). This allows for efficient traffic routing using Traefik Ingress rules, ensuring that requests are directed to the appropriate pods based on the URL:
 
 ```yaml
 apiVersion: traefik.containo.us/v1alpha1
@@ -58,11 +58,11 @@ spec:
           port: 7373
 ```
 
-For more details on Traefik Ingress rules, you can refer to the [**official documentation**](https://doc.traefik.io/traefik/providers/kubernetes-ingress).
+For more details on Traefik Ingress rules, you can refer to the [**official documentation**](https://doc.traefik.io/traefik/providers/kubernetes-ingress/).
 
-To automate the issuance and renewal of TLS certificates for the `secutils.dev` domain name, I utilize [**Traefik along with Let's Encrypt**](https://doc.traefik.io/traefik/https/acme). The use of TLS certificates is essential, especially for the `.dev` top-level domain, which is included on the [**HSTS preload list**](https://get.dev). This list mandates that all connections to `.dev` websites be made over HTTPS. By leveraging Traefik, I can ensure that the TLS certificates are automatically managed and renewed, eliminating the risk of overlooking the certificate renewal.
+To automate the issuance and renewal of TLS certificates for the `secutils.dev` domain name, I utilize [**Traefik along with Let's Encrypt**](https://doc.traefik.io/traefik/https/acme/). The use of TLS certificates is essential, especially for the `.dev` top-level domain, which is included on the [**HSTS preload list**](https://get.dev). This list mandates that all connections to `.dev` websites be made over HTTPS. By leveraging Traefik, I can ensure that the TLS certificates are automatically managed and renewed, eliminating the risk of overlooking the certificate renewal.
 
-Each component of Secutils.dev has its own Git repository, and within each repository, there is a `Dockerfile` provided. These files are used to build Docker images that are subsequently deployed to the Kubernetes cluster. To optimize the size and efficiency of the Docker images, I employ [**multi-stage builds**](https://docs.docker.com/build/building/multi-stage). This approach allows me to include only the necessary dependencies and artifacts in the final image, resulting in a lightweight and efficient container. You can find an example of this approach in the [**Web UI `Dockerfile`**](https://github.com/secutils-dev/secutils-webui/blob/main/Dockerfile) of the Secutils.dev project:
+Each component of Secutils.dev has its own Git repository, and within each repository, there is a `Dockerfile` provided. These files are used to build Docker images that are subsequently deployed to the Kubernetes cluster. To optimize the size and efficiency of the Docker images, I employ [**multi-stage builds**](https://docs.docker.com/build/building/multi-stage/). This approach allows me to include only the necessary dependencies and artifacts in the final image, resulting in a lightweight and efficient container. You can find an example of this approach in the [**Web UI `Dockerfile`**](https://github.com/secutils-dev/secutils-webui/blob/main/Dockerfile) of the Secutils.dev project:
 
 ```docker
 # syntax=docker/dockerfile:1
@@ -77,7 +77,7 @@ COPY ["./config/nginx.conf", "/etc/nginx/conf.d/default.conf"]
 
 For components that serve pre-built static assets, I opt for the NGINX Alpine Linux image as the base image. NGINX is well-known for its speed and configurability, and its Alpine Docker image is lightweight. In each component's repository, you can find the NGINX configuration file ([**example here**](https://github.com/secutils-dev/secutils-webui/blob/main/config/nginx.conf)) that includes settings for Content Security Policy (CSP), compression, and additional routing configurations.
 
-When preparing to deploy a new version to the production environment, I follow a specific process. Initially, I push the changes to a dedicated "dev" environment to perform a quick smoke test. While Kubernetes simplifies managing multiple environments, I acknowledge that the manual deployment process can be somewhat inefficient. To address this, I am currently exploring the use of [**Argo CD**](https://argo-cd.readthedocs.io/en/stable) to automate the continuous deployment process for the dev environment.
+When preparing to deploy a new version to the production environment, I follow a specific process. Initially, I push the changes to a dedicated "dev" environment to perform a quick smoke test. While Kubernetes simplifies managing multiple environments, I acknowledge that the manual deployment process can be somewhat inefficient. To address this, I am currently exploring the use of [**Argo CD**](https://argo-cd.readthedocs.io/en/stable/) to automate the continuous deployment process for the dev environment.
 
 Although deploying to Kubernetes may seem complex initially, it offers significant advantages in terms of deployment control, orchestration, and scalability. In this post, I had to omit some of the finer details to maintain readability. However, if you have any specific questions about the deployment of Secutils.dev, please feel free to leave a comment, and I'll be more than happy to provide detailed answers and insights!
 

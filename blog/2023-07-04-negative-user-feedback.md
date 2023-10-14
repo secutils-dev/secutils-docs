@@ -8,7 +8,7 @@ tags: [thoughts]
 ---
 Hello!
 
-Just a brief post today to highlight an important milestone for [**Secutils.dev**](http://secutils.dev/) - I recently received the first negative user feedback! It may not sound like something to celebrate or take pride in, but I view it differently. Over the past month, I've received a bit of unsolicited positive feedback, primarily from fellow builders and indie hackers. Their input has been valuable, and I do appreciate it. However, I have to admit that people like me have a higher tolerance for work-in-progress software, imperfections, and bugs. Moreover, solo-builders tend to be incredibly supportive of one another, much like parents with young children empathizing with other parents in similar situations 🙂
+Just a brief post today to highlight an important milestone for [**Secutils.dev**](https://secutils.dev/) - I recently received the first negative user feedback! It may not sound like something to celebrate or take pride in, but I view it differently. Over the past month, I've received a bit of unsolicited positive feedback, primarily from fellow builders and indie hackers. Their input has been valuable, and I do appreciate it. However, I have to admit that people like me have a higher tolerance for work-in-progress software, imperfections, and bugs. Moreover, solo-builders tend to be incredibly supportive of one another, much like parents with young children empathizing with other parents in similar situations 🙂
 
 But the negative feedback I received this past weekend came from a "real user," which presents a different perspective altogether.
 
