@@ -27,13 +27,13 @@
     "docusaurus-plugin-sass": "^0.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.69.0"
+    "sass": "^1.69.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cli": "^17.8.0",
+    "@commitlint/config-conventional": "^17.8.0",
     "@docusaurus/module-type-aliases": "^2.4.3",
-    "@tsconfig/docusaurus": "^2.0.1",
+    "@tsconfig/docusaurus": "^2.0.2",
     "husky": "^8.0.3",
     "typescript": "^5.2.2"
   },
