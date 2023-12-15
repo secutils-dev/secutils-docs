@@ -25,7 +25,7 @@ If we blindly redirect the user to whatever URL is embedded in the `next` query 
 If Secutils.dev doesn’t validate the URL from the `next` parameter properly, after successful login, you'll be redirected to `https://ws-secutils.dev/ws/web_scraping`, and the chances that you'll check the URL bar again are very low. This is known as an [**“open redirect”**](https://cwe.mitre.org/data/definitions/601.html). The `https://ws-secutils.dev/ws/web_scraping` page can look exactly like the login page of the legitimate website and can prompt you to re-enter your Secutils.dev credentials, tricking you into providing your login details on the wrong website. After it steals your credentials, it can finally redirect you to `https://secutils.dev`, and you might not even notice that something was wrong.
 
 :::tip NOTE
-Such phishing attacks [**wouldn’t work if you use passkey**](https://support.apple.com/en-us/HT213305) as your credentials since it’s bound to the legitimate website/origin. If you don’t use passkey to sign in to Secutils.dev yet, I strongly encourage you to consider switching to it. It’s easy to do and convenient to use.
+Such phishing attacks [**wouldn’t work if you use passkey**](https://support.apple.com/en-us/102195) as your credentials since it’s bound to the legitimate website/origin. If you don’t use passkey to sign in to Secutils.dev yet, I strongly encourage you to consider switching to it. It’s easy to do and convenient to use.
 :::
 
 Phishing is much more common than you might think. Take a look at the image with the recent statistics:

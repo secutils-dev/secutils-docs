@@ -28,7 +28,7 @@ Now, let's examine what [**google.com**](https://google.com) delivers in the `Co
 
 The CSP used by Google appears quite reasonable to me, given their stature. Although having two unsafe directives isn't ideal, I trust Google's Security team extensively evaluated potential attack vectors and deemed the risk close to negligible. The inclusion of [**`report-sample`**](https://www.w3.org/TR/CSP/#violation-sample) can be incredibly useful when monitoring CSP violations since having a sample makes it much easier to understand how the policy was violated exactly.
 
-Interestingly, CSP violations are directed to `https://csp.withgoogle.com/csp/gws/other-hp`. I hadn't encountered this website before! I encourage you to visit [**csp.withgoogle.com**](https://csp.withgoogle.com) to explore this valuable resource dedicated to CSP and its necessity.
+Interestingly, CSP violations are directed to `https://csp.withgoogle.com/csp/gws/other-hp`. I hadn't encountered this website before! I encourage you to visit [**csp.withgoogle.com**](https://csp.withgoogle.com/docs/index.html) to explore this valuable resource dedicated to CSP and its necessity.
 
 ## Bing
 
@@ -62,7 +62,7 @@ It's something I might address in the future. For now, let me turn this setback 
 
 Simply by examining a website's CSP, you can learn a lot about its construction and reliance on third-party solutions. It's a complex beast with many moving parts. Nothing particularly alarming here though. It's a pretty standard set for a modern application.
 
-I also noticed that OpenAI collects CSP violation reports using the [**Datadog Content Security Policy integration**](https://docs.datadoghq.com/integrations/content_security_policy_logs). However, having [**`unsafe-eval` and `unsafe-inline`**](https://www.w3.org/TR/CSP/#directive-script-src) in the scripts directive, especially for an application like ChatGPT, does raise concerns. Hopefully, there's a compelling reason behind this.
+I also noticed that OpenAI collects CSP violation reports using the [**Datadog Content Security Policy integration**](https://docs.datadoghq.com/integrations/content_security_policy_logs/). However, having [**`unsafe-eval` and `unsafe-inline`**](https://www.w3.org/TR/CSP/#directive-script-src) in the scripts directive, especially for an application like ChatGPT, does raise concerns. Hopefully, there's a compelling reason behind this.
 
 ![ChatGPT content security policy reporting](/img/blog/2023-11-28_import_policy_chatgpt_reporting.png)
 

@@ -8,7 +8,7 @@ tags: [thoughts, technology]
 ---
 Hello!
 
-It's an understatement to say that there is a lot of hype around AI these days. It seems to be integrated into everything. The company I work for, Elastic, is also keeping up with the trend by recently releasing the [**Elasticsearch Relevance Engine™ (ESRE™)**](https://www.elastic.co/search-labs/may-2023-launch-announcement) and the [**Elastic AI Assistant**](https://www.elastic.co/blog/introducing-elastic-ai-assistant). Even though I'm typically quite skeptical about over-hyped stuff, I must admit that AI is certainly making waves!
+It's an understatement to say that there is a lot of hype around AI these days. It seems to be integrated into everything. The company I work for, Elastic, is also keeping up with the trend by recently releasing the [**Elasticsearch Relevance Engine™ (ESRE™)**]https://www.elastic.co/search-labs/blog/articles/may-2023-launch-announcement) and the [**Elastic AI Assistant**](https://www.elastic.co/blog/introducing-elastic-ai-assistant). Even though I'm typically quite skeptical about over-hyped stuff, I must admit that AI is certainly making waves!
 
 Unsurprisingly, I also find myself asking a question: could the integration of AI tools be useful to the users of [**Secutils.dev**](https://secutils.dev)? Let's attempt to answer this question by exploring a simple proof-of-concept that I have been tinkering with this week!
 

@@ -99,7 +99,7 @@ While you have the option to use the self-hosted Vault from HashiCorp, I take ad
 
 **Vendor:** [**Internet Security Research Group (Let's Encrypt)**](https://letsencrypt.org)
 
-Gone are the days when you were required to pay for TLS certificates for your website. Thanks to the Internet Security Research Group, obtaining TLS certificates has become free and accessible. Since I have a Kubernetes cluster, I utilize [**Traefik**](https://doc.traefik.io/traefik/https/acme) to automatically issue and renew TLS certificates for the `secutils.dev` domain and its subdomains. This service is provided by Let's Encrypt, and it comes at no cost to me.
+Gone are the days when you were required to pay for TLS certificates for your website. Thanks to the Internet Security Research Group, obtaining TLS certificates has become free and accessible. Since I have a Kubernetes cluster, I utilize [**Traefik**](https://doc.traefik.io/traefik/https/acme/) to automatically issue and renew TLS certificates for the `secutils.dev` domain and its subdomains. This service is provided by Let's Encrypt, and it comes at no cost to me.
 
 ## Storage
 
