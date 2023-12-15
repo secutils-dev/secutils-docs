@@ -66,7 +66,7 @@ spec:
 ## Privilege management
 
 [**The principle of least privilege**](https://en.wikipedia.org/wiki/Principle_of_least_privilege) is particularly crucial when dealing with complex software like a web browser. Running a browser as the root user is inviting trouble, and it's something you should avoid. For instance, if you're using Node.js to automate a headless browser with tools like Puppeteer or Playwright, make sure to run it as a [**non-root user**](https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#non-root-user):
-```docker
+```bash
 FROM node:20-alpine3.18
 ...
 USER node

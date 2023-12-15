@@ -64,7 +64,7 @@ To automate the issuance and renewal of TLS certificates for the `secutils.dev` 
 
 Each component of Secutils.dev has its own Git repository, and within each repository, there is a `Dockerfile` provided. These files are used to build Docker images that are subsequently deployed to the Kubernetes cluster. To optimize the size and efficiency of the Docker images, I employ [**multi-stage builds**](https://docs.docker.com/build/building/multi-stage/). This approach allows me to include only the necessary dependencies and artifacts in the final image, resulting in a lightweight and efficient container. You can find an example of this approach in the [**Web UI `Dockerfile`**](https://github.com/secutils-dev/secutils-webui/blob/main/Dockerfile) of the Secutils.dev project:
 
-```docker
+```bash
 # syntax=docker/dockerfile:1
 FROM --platform=$BUILDPLATFORM node:20-alpine3.17 as UI_BUILDER
 ...

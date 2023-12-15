@@ -20,14 +20,70 @@ In this guide you'll create a template for generating a private key and self-sig
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>https-server</pre></td></tr>
-<tr><td><b>Key algorithm</b></td><td><pre>RSA</pre></td></tr>
-<tr><td><b>Key size</b></td><td><pre>2048 bit</pre></td></tr>
-<tr><td><b>Signature algorithm</b></td><td><pre>SHA-256</pre></td></tr>
-<tr><td><b>Certificate type</b></td><td><pre>End Entity</pre></td></tr>
-<tr><td><b>Key usage</b></td><td><pre>Key encipherment, Digital signature</pre></td></tr>
-<tr><td><b>Extended key usage</b></td><td><pre>TLS Web server authentication</pre></td></tr>
-<tr><td><b>Common name (CN)</b></td><td><pre>localhost</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+https-server
+```
+</td>
+</tr>
+<tr>
+<td><b>Key algorithm</b></td>
+<td>
+```
+RSA
+```
+</td>
+</tr>
+<tr>
+<td><b>Key size</b></td>
+<td>
+```
+2048 bit
+```
+</td>
+</tr>
+<tr>
+<td><b>Signature algorithm</b></td>
+<td>
+```
+SHA-256
+```
+</td>
+</tr>
+<tr>
+<td><b>Certificate type</b></td>
+<td>
+```
+End Entity
+```
+</td>
+</tr>
+<tr>
+<td><b>Key usage</b></td>
+<td>
+```
+Key encipherment, Digital signature
+```
+</td>
+</tr>
+<tr>
+<td><b>Extended key usage</b></td>
+<td>
+```
+TLS Web server authentication
+```
+</td>
+</tr>
+<tr>
+<td><b>Common name (CN)</b></td>
+<td>
+```
+localhost
+```
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -37,8 +93,22 @@ In this guide you'll create a template for generating a private key and self-sig
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Format</b></td><td><pre>PKCS#12</pre></td></tr>
-<tr><td><b>Passphrase</b></td><td><pre>pass</pre></td></tr>
+<tr>
+<td><b>Format</b></td>
+<td>
+```
+PKCS#12
+```
+</td>
+</tr>
+<tr>
+<td><b>Passphrase</b></td>
+<td>
+```
+pass
+```
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -110,11 +180,46 @@ In this guide, you will generate a private key in PKCS#8 format and then export 
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>jwk</pre></td></tr>
-<tr><td><b>Key algorithm</b></td><td><pre>ECDSA</pre></td></tr>
-<tr><td><b>Curve name</b></td><td><pre>secp384r1 / NIST P-384</pre></td></tr>
-<tr><td><b>Signature algorithm</b></td><td><pre>SHA-256</pre></td></tr>
-<tr><td><b>Certificate type</b></td><td><pre>End Entity</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+jwk
+```
+</td>
+</tr>
+<tr>
+<td><b>Key algorithm</b></td>
+<td>
+```
+ECDSA
+```
+</td>
+</tr>
+<tr>
+<td><b>Curve name</b></td>
+<td>
+```
+secp384r1 / NIST P-384
+```
+</td>
+</tr>
+<tr>
+<td><b>Signature algorithm</b></td>
+<td>
+```
+SHA-256
+```
+</td>
+</tr>
+<tr>
+<td><b>Certificate type</b></td>
+<td>
+```
+End Entity
+```
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -125,8 +230,21 @@ In this guide, you will generate a private key in PKCS#8 format and then export 
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>subtle-crypto</pre></td></tr>
-<tr><td><b>Method</b></td><td><pre>GET</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+subtle-crypto
+```
+</td></tr>
+<tr>
+<td><b>Method</b></td>
+<td>
+```
+GET
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>

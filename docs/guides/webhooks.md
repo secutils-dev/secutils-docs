@@ -26,8 +26,21 @@ In this guide you'll create a simple responder that returns a static HTML page:
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>html-responder</pre></td></tr>
-<tr><td><b>Method</b></td><td><pre>GET</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+html-responder
+```
+</td></tr>
+<tr>
+<td><b>Method</b></td>
+<td>
+```
+GET
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>
@@ -75,8 +88,21 @@ In this guide you'll create a simple responder that returns a JSON value:
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>json-responder</pre></td></tr>
-<tr><td><b>Method</b></td><td><pre>GET</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+json-responder
+```
+</td></tr>
+<tr>
+<td><b>Method</b></td>
+<td>
+```
+GET
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>
@@ -120,8 +146,21 @@ In this guide, you'll create a responder that returns an HTML page with custom I
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>notion-honeypot</pre></td></tr>
-<tr><td><b>Tracking</b></td><td><pre>5</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+notion-honeypot
+```
+</td></tr>
+<tr>
+<td><b>Tracking</b></td>
+<td>
+```
+5
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>

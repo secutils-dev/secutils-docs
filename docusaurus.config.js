@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightTheme = require('prism-react-renderer/themes/vsLight');
-const darkTheme = require('prism-react-renderer/themes/vsDark');
+const { themes } = require('prism-react-renderer');
+const lightTheme = themes.vsLight;
+const darkTheme = themes.vsDark;
 
 const URL = process.env.SECUTILS_URL ?? 'https://secutils.dev';
 
@@ -130,7 +131,7 @@ const config = {
       prism: {
         theme: lightTheme,
         darkTheme: darkTheme,
-        additionalLanguages: ['rust'],
+        additionalLanguages: ['diff', 'json', 'yaml', 'bash'],
       },
       colorMode: {
         disableSwitch: false,

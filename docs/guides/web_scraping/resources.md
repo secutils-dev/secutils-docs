@@ -20,8 +20,22 @@ In this guide, you'll create a simple resources tracker for the [Hacker News](ht
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>Hacker News</pre></td></tr>
-<tr><td><b>URL</b></td><td><pre>https://news.ycombinator.com</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+Hacker News
+```
+</td>
+</tr>
+<tr>
+<td><b>Method</b></td>
+<td>
+```
+https://news.ycombinator.com
+```
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -48,7 +62,14 @@ In this guide, you will create a web page resources tracker and test it using a 
 This JavaScript **will remain unchanged** across revisions:
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>no-changes.js</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+no-changes.js
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>
@@ -76,7 +97,14 @@ document.body.insertAdjacentHTML(
 This JavaScript **will change** across revisions:
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>changed.js</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+changed.js
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>
@@ -104,7 +132,14 @@ document.body.insertAdjacentHTML(
 This JavaScript **will be removed** across revisions:
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>removed.js</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+removed.js
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>
@@ -132,7 +167,14 @@ document.body.insertAdjacentHTML(
 This JavaScript **will be added** in a new revision:
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>added.js</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+added.js
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>
@@ -161,7 +203,14 @@ document.body.insertAdjacentHTML(
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>track-me.html</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+track-me.html
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>
@@ -206,10 +255,38 @@ Source: removed.js
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>Demo</pre></td></tr>
-<tr><td><b>URL</b></td><td><pre>https://secutils.dev/api/webhooks/ar/<b>[YOUR UNIQUE ID]</b>/track-me.html</pre></td></tr>
-<tr><td><b>Frequency</b></td><td><pre>Daily</pre></td></tr>
-<tr><td><b>Notifications</b></td><td><pre>☑️</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+Demo
+```
+</td>
+</tr>
+<tr>
+<td><b>URL</b></td>
+<td>
+```
+https://secutils.dev/api/webhooks/ar/<b>[YOUR UNIQUE ID]</b>/track-me.html
+```
+</td>
+</tr>
+<tr>
+<td><b>Frequency</b></td>
+<td>
+```
+Daily
+```
+</td>
+</tr>
+<tr>
+<td><b>Notifications</b></td>
+<td>
+```
+☑
+```
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -225,9 +302,9 @@ Configured tracker will fetch the resources of the `track-me.html` responder onc
 <table class="su-table">
 <tbody>
 <tr><th>Source</th><th>Diff</th><th>Type</th><th>Size</th></tr>
-<tr><td>https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/no-change.js</td><td>-</td><td>Script</td><td>81</td></tr>
-<tr><td>https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/changed.js</td><td>-</td><td>Script</td><td>91</td></tr>
-<tr><td>https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/removed.js</td><td>-</td><td>Script</td><td>78</td></tr>
+<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/no-change.js`</td><td>-</td><td>Script</td><td>81</td></tr>
+<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/changed.js`</td><td>-</td><td>Script</td><td>91</td></tr>
+<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/removed.js`</td><td>-</td><td>Script</td><td>78</td></tr>
 </tbody>
 </table>
 
@@ -272,10 +349,10 @@ Normally, Secutils.dev caches web page resources for **10 minutes**. This means 
 <table class="su-table">
 <tbody>
 <tr><th>Source</th><th>Diff</th><th>Type</th><th>Size</th></tr>
-<tr><td>https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/no-change.js</td><td><b>-</b></td><td>Script</td><td>81</td></tr>
-<tr><td>https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/changed.js</td><td><b>Changed</b></td><td>Script</td><td>91</td></tr>
-<tr><td>https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/added.js</td><td><b>Added</b></td><td>Script</td><td>76</td></tr>
-<tr><td>https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/removed.js</td><td><b>Removed</b></td><td>Script</td><td>78</td></tr>
+<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/no-change.js`</td><td><b>-</b></td><td>Script</td><td>81</td></tr>
+<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/changed.js`</td><td><b>Changed</b></td><td>Script</td><td>91</td></tr>
+<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/added.js`</td><td><b>Added</b></td><td>Script</td><td>76</td></tr>
+<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/removed.js`</td><td><b>Removed</b></td><td>Script</td><td>78</td></tr>
 </tbody>
 </table>
 
@@ -295,8 +372,22 @@ In this guide, you will create a web page resource tracker for the Reddit home p
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>Reddit</pre></td></tr>
-<tr><td><b>URL</b></td><td><pre>https://reddit.com/<b>?rev=1</b></pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+Reddit
+```
+</td>
+</tr>
+<tr>
+<td><b>URL</b></td>
+<td>
+```
+https://reddit.com/?rev=1
+```
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -314,7 +405,14 @@ Note that every time you change the tracker's URL, all previously fetched resour
 
 <table class="su-table">
 <tbody>
-<tr><td><b>URL</b></td><td><pre>https://reddit.com/<b>?rev=2</b></pre></td></tr>
+<tr>
+<td><b>URL</b></td>
+<td>
+```
+https://reddit.com/?rev=2
+```
+</td>
+</tr>
 <tr>
     <td><b>Resource filter/mapper</b></td>
 <td>

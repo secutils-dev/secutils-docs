@@ -33,8 +33,22 @@ First and foremost, let's create a simple auto-responder that simulates a web pa
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>web-bookmark-v1</pre></td></tr>
-<tr><td><b>Tracking</b></td><td><pre>10</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+web-bookmark-v1
+```
+</td>
+</tr>
+<tr>
+<td><b>Tracking</b></td>
+<td>
+```
+10
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>
@@ -89,8 +103,22 @@ Unfortunately, it appears that Notion/Iframely caches web page metadata. So, in 
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>web-bookmark-v2</pre></td></tr>
-<tr><td><b>Tracking</b></td><td><pre>10</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+web-bookmark-v2
+```
+</td>
+</tr>
+<tr>
+<td><b>Tracking</b></td>
+<td>
+```
+10
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>

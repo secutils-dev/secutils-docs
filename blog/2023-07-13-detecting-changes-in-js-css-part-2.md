@@ -52,7 +52,7 @@ To address this challenge, we can turn to malware detection techniques! One such
 
 There are various fuzzy hashing approaches, such as Context Triggered Piecewise Hashing (CTPH) and Locality Sensitive Hashing (LSH). For Secutils.dev, I use [**Trend Micro Locality Sensitive Hashing (TLSH)**](https://tlsh.org/) due to its relatively low content requirements for generating hashes. It only needs content that is 50 bytes or larger and has sufficient randomness, which is typically the case for 99.99% of inline web page resources. If, for some reason, these requirements are not met, we can fall back to storing the entire content if it is small enough or using the SHA1 digest if it lacks sufficient randomness (I'd be rather surprised though):
 
-```shell
+```bash
 $ cat inline-revision-0.js 
 alert(1);
 alert(2);

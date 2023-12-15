@@ -20,9 +20,30 @@ In this guide you'll create a simple Content Security Policy template that allow
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>secutils.dev</pre></td></tr>
-<tr><td><b>Default source (default-src)</b></td><td><pre>'self', api.secutils.dev</pre></td></tr>
-<tr><td><b>Style source (style-src)</b></td><td><pre>'self', fonts.googleapis.com</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+secutils.dev
+```
+</td>
+</tr>
+<tr>
+<td><b>Default source (default-src)</b></td>
+<td>
+```
+'self', api.secutils.dev
+```
+</td>
+</tr>
+<tr>
+<td><b>Style source (style-src)</b></td>
+<td>
+```
+'self', fonts.googleapis.com
+```
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -32,7 +53,14 @@ In this guide you'll create a simple Content Security Policy template that allow
 
 <table class="su-table">
 <tbody>
-<tr><td><b>HTTP header</b></td><td><pre>Content-Security-Policy: default-src 'self' api.secutils.dev; style-src 'self' fonts.googleapis.com</pre></td></tr>
+<tr>
+<td><b>HTTP header</b></td>
+<td>
+```
+Content-Security-Policy: default-src 'self' api.secutils.dev; style-src 'self' fonts.googleapis.com
+```
+</td>
+</tr>
 <tr>
     <td><b>HTML tag</b></td>
 <td>
@@ -61,12 +89,24 @@ In this guide, you will create a Content Security Policy and test it using a cus
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>csp-test</pre></td></tr>
-<tr><td><b>Method</b></td><td><pre>GET</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+csp-test
+```
+</td></tr>
+<tr>
+<td><b>Method</b></td>
+<td>
+```
+GET
+```
+</td>
+</tr>
 <tr>
     <td><b>Body</b></td>
 <td>
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -102,8 +142,22 @@ In this guide, you will create a Content Security Policy and test it using a cus
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>csp</pre></td></tr>
-<tr><td><b>Script source (script-src)</b></td><td><pre>'self', 'unsafe-inline'</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+csp
+```
+</td>
+</tr>
+<tr>
+<td><b>Script source (script-src)</b></td>
+<td>
+```
+'self', 'unsafe-inline'
+```
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -131,9 +185,30 @@ In this guide, you will create a Content Security Policy and collect its violati
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>csp</pre></td></tr>
-<tr><td><b>Script source (script-src)</b></td><td><pre>'self', 'unsafe-inline', 'report-sample'</pre></td></tr>
-<tr><td><b>Report to (report-to)</b></td><td><pre>default</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+csp
+```
+</td>
+</tr>
+<tr>
+<td><b>Script source (script-src)</b></td>
+<td>
+```
+'self', 'unsafe-inline', 'report-sample'
+```
+</td>
+</tr>
+<tr>
+<td><b>Report to (report-to)</b></td>
+<td>
+```
+default
+```
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -145,9 +220,30 @@ In this guide, you will create a Content Security Policy and collect its violati
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>csp-reporting</pre></td></tr>
-<tr><td><b>Method</b></td><td><pre>POST</pre></td></tr>
-<tr><td><b>Tracking</b></td><td><pre>10</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+csp-reporting
+```
+</td>
+</tr>
+<tr>
+<td><b>Method</b></td>
+<td>
+```
+POST
+```
+</td>
+</tr>
+<tr>
+<td><b>Tracking</b></td>
+<td>
+```
+10
+```
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -157,8 +253,21 @@ In this guide, you will create a Content Security Policy and collect its violati
 
 <table class="su-table">
 <tbody>
-<tr><td><b>Name</b></td><td><pre>csp-test</pre></td></tr>
-<tr><td><b>Method</b></td><td><pre>GET</pre></td></tr>
+<tr>
+<td><b>Name</b></td>
+<td>
+```
+csp-test
+```
+</td></tr>
+<tr>
+<td><b>Method</b></td>
+<td>
+```
+GET
+```
+</td>
+</tr>
 <tr>
     <td><b>Headers</b></td>
 <td>
