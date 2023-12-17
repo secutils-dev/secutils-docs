@@ -54,7 +54,7 @@ secutils.dev
 <table class="su-table">
 <tbody>
 <tr>
-<td><b>HTTP header</b></td>
+<td><b>HTTP header (enforcing)</b></td>
 <td>
 ```
 Content-Security-Policy: default-src 'self' api.secutils.dev; style-src 'self' fonts.googleapis.com
@@ -62,7 +62,7 @@ Content-Security-Policy: default-src 'self' api.secutils.dev; style-src 'self' f
 </td>
 </tr>
 <tr>
-    <td><b>HTML tag</b></td>
+    <td><b>HTML meta tag</b></td>
 <td>
 
 ```html
@@ -93,9 +93,18 @@ In this guide, you will create a Content Security Policy and test it using a cus
 <td><b>Name</b></td>
 <td>
 ```
-csp-test
+CSP Test
 ```
-</td></tr>
+</td>
+</tr>
+<tr>
+<td><b>Path</b></td>
+<td>
+```
+/csp-test
+```
+</td>
+</tr>
 <tr>
 <td><b>Method</b></td>
 <td>
@@ -146,7 +155,7 @@ GET
 <td><b>Name</b></td>
 <td>
 ```
-csp
+CSP Test
 ```
 </td>
 </tr>
@@ -163,7 +172,7 @@ csp
 
 8. Click on the **Save** button to save the policy
 9. Once the policy is set up, it will appear in the policies grid
-10. Click on the policy's **Copy policy** button and use **Policy source** dropdown to switch to **HTML tag** policy representation
+10. Click on the policy's **Copy policy** button and use **Policy source** dropdown to switch to **HTML meta tag** policy representation
 11. Copy `<meta>` HTML tag with the policy and navigate to [Webhooks → Responders](https://secutils.dev/ws/webhooks__responders) again
 12. Edit **Body** property of the previously created **csp-test** responder to include `<meta>` HTML tag with the policy inside `<head>` HTML tag
 13. Click on the **Save** button and navigate to the responder's URL again
@@ -189,7 +198,7 @@ In this guide, you will create a Content Security Policy and collect its violati
 <td><b>Name</b></td>
 <td>
 ```
-csp
+CSP Reporting
 ```
 </td>
 </tr>
@@ -214,7 +223,7 @@ default
 
 3. Click on the **Save** button to save the policy
 4. Once the policy is set up, it will appear in the policies grid
-5. Click on the policy's **Copy policy** button, switch **Policy source** to **HTTP header** and copy generated policy header
+5. Click on the policy's **Copy policy** button, switch **Policy source** to **HTTP header (enforcing)** and copy generated policy header
 6. Now, navigate to [Webhooks → Responders](https://secutils.dev/ws/webhooks__responders) and click **Create responder** button
 7. Configure a new responder with the following values to collect CSP violation reports:
 
@@ -224,7 +233,15 @@ default
 <td><b>Name</b></td>
 <td>
 ```
-csp-reporting
+CSP Reporting
+```
+</td>
+</tr>
+<tr>
+<td><b>Path</b></td>
+<td>
+```
+/csp-reporting
 ```
 </td>
 </tr>
@@ -257,9 +274,18 @@ POST
 <td><b>Name</b></td>
 <td>
 ```
-csp-test
+CSP Eval Test
 ```
-</td></tr>
+</td>
+</tr>
+<tr>
+<td><b>Path</b></td>
+<td>
+```
+/csp-eval-test
+```
+</td>
+</tr>
 <tr>
 <td><b>Method</b></td>
 <td>
@@ -273,8 +299,8 @@ GET
 <td>
 
 ```http
-Reporting-Endpoints: default="[`csp-reporting` responder URL]",
-Content-Security-Policy: [`csp` policy content],
+Reporting-Endpoints: default="[**REPLACE WITH `CSP Reporting` responder URL**]",
+Content-Security-Policy: [*REPLACE WITH `CSP Reporting` policy content**],
 Content-Type: text/html; charset=utf-8
 ```
 </td>
@@ -314,7 +340,7 @@ Content-Type: text/html; charset=utf-8
 12. Once the responder is set up, it will appear in the responders grid along with its unique URL
 13. Click on the responder's URL to navigate to the test page
 14. On the test page, click on the **Eval** button and notice that nothing happens except that browser logs an error message in its console meaning that you have successfully forbidden **eval()** with the Content Security Policy
-15. Go back to the responder's grid and expand the **csp-reporting** responder to view the CSP violation report that browser has sent when you tried to use **eval()**
+15. Go back to the responder's grid and expand the **CSP Reporting** responder to view the CSP violation report that browser has sent when you tried to use **eval()**
 
 Watch the video demo below to see all the steps mentioned earlier in action:
 

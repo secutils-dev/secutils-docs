@@ -15,7 +15,7 @@ On this page, you can find guides on creating and using web page resources track
 
 In this guide, you'll create a simple resources tracker for the [Hacker News](https://news.ycombinator.com/):
 
-1. Navigate to [Web Scraping → Resources Trackers](https://secutils.dev/ws/web_scraping__resources) and click **Track resources** button
+1. Navigate to [Web Scraping → Resources trackers](https://secutils.dev/ws/web_scraping__resources) and click **Track resources** button
 2. Configure a new tracker with the following values:
 
 <table class="su-table">
@@ -29,7 +29,7 @@ Hacker News
 </td>
 </tr>
 <tr>
-<td><b>Method</b></td>
+<td><b>URL</b></td>
 <td>
 ```
 https://news.ycombinator.com
@@ -41,7 +41,7 @@ https://news.ycombinator.com
 
 3. Click on the **Save** button to save the tracker
 4. Once the tracker is set up, it will appear in the trackers grid
-5. Expand the tracker's row and click on the **Fetch resources** button to make the first snapshot of the web page resources 
+5. Expand the tracker's row and click on the **Update** button to make the first snapshot of the web page resources 
 
 It's hard to believe, but as of the time of writing, Hacker News continues to rely on just a single script and stylesheet!
 
@@ -67,6 +67,14 @@ This JavaScript **will remain unchanged** across revisions:
 <td>
 ```
 no-changes.js
+```
+</td>
+</tr>
+<tr>
+<td><b>Path</b></td>
+<td>
+```
+/no-changes.js
 ```
 </td>
 </tr>
@@ -106,6 +114,14 @@ changed.js
 </td>
 </tr>
 <tr>
+<td><b>Path</b></td>
+<td>
+```
+/changed.js
+```
+</td>
+</tr>
+<tr>
     <td><b>Headers</b></td>
 <td>
 
@@ -137,6 +153,14 @@ This JavaScript **will be removed** across revisions:
 <td>
 ```
 removed.js
+```
+</td>
+</tr>
+<tr>
+<td><b>Path</b></td>
+<td>
+```
+/removed.js
 ```
 </td>
 </tr>
@@ -176,6 +200,14 @@ added.js
 </td>
 </tr>
 <tr>
+<td><b>Path</b></td>
+<td>
+```
+/added.js
+```
+</td>
+</tr>
+<tr>
     <td><b>Headers</b></td>
 <td>
 
@@ -208,6 +240,14 @@ document.body.insertAdjacentHTML(
 <td>
 ```
 track-me.html
+```
+</td>
+</tr>
+<tr>
+<td><b>Path</b></td>
+<td>
+```
+/track-me.html
 ```
 </td>
 </tr>
@@ -250,7 +290,7 @@ Source: no-changes.js
 Source: changed.js, Changed: no
 Source: removed.js
 ```
-7. Now, navigate to [Web Scraping → Resources Trackers](https://secutils.dev/ws/web_scraping__resources) and click **Track resources** button
+7. Now, navigate to [Web Scraping → Resources trackers](https://secutils.dev/ws/web_scraping__resources) and click **Track resources** button
 8. Configure a new tracker for `track-me.html` responder with the following values:
 
 <table class="su-table">
@@ -267,7 +307,7 @@ Demo
 <td><b>URL</b></td>
 <td>
 ```
-https://secutils.dev/api/webhooks/ar/<b>[YOUR UNIQUE ID]</b>/track-me.html
+https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/track-me.html
 ```
 </td>
 </tr>
@@ -296,15 +336,15 @@ Configured tracker will fetch the resources of the `track-me.html` responder onc
 
 9. Click on the **Save** button to save the tracker
 10. Once the tracker is set up, it will appear in the trackers grid
-11. Expand the tracker's row and click on the **Fetch resources** button to make the first snapshot of the web page resources
+11. Expand the tracker's row and click on the **Update** button to make the first snapshot of the web page resources
 12. Once the tracker has fetched the resources, they will appear in the resources grid:
 
 <table class="su-table">
 <tbody>
 <tr><th>Source</th><th>Diff</th><th>Type</th><th>Size</th></tr>
-<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/no-change.js`</td><td>-</td><td>Script</td><td>81</td></tr>
-<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/changed.js`</td><td>-</td><td>Script</td><td>91</td></tr>
-<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/removed.js`</td><td>-</td><td>Script</td><td>78</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/no-change.js`</td><td>-</td><td>Script</td><td>81</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/changed.js`</td><td>-</td><td>Script</td><td>91</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/removed.js`</td><td>-</td><td>Script</td><td>78</td></tr>
 </tbody>
 </table>
 
@@ -338,8 +378,8 @@ document.body.insertAdjacentHTML(
 );
 ```
 
-15. Finally, navigate to [Web Scraping → Resources Trackers](https://secutils.dev/ws/web_scraping__resources) and expand the `Demo` tracker's row
-16. Click **Fetch resources** button to fetch the next revision of the web page resources
+15. Finally, navigate to [Web Scraping → Resources trackers](https://secutils.dev/ws/web_scraping__resources) and expand the `Demo` tracker's row
+16. Click **Update** button to fetch the next revision of the web page resources
 
 :::caution NOTE
 Normally, Secutils.dev caches web page resources for **10 minutes**. This means that if you make changes to the web page resources and want to see them reflected in the tracker, you'll need to wait for 10 minutes before re-fetching resources. However, for this guide, I've disabled caching for the tracker so that you can see changes immediately.
@@ -349,10 +389,10 @@ Normally, Secutils.dev caches web page resources for **10 minutes**. This means 
 <table class="su-table">
 <tbody>
 <tr><th>Source</th><th>Diff</th><th>Type</th><th>Size</th></tr>
-<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/no-change.js`</td><td><b>-</b></td><td>Script</td><td>81</td></tr>
-<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/changed.js`</td><td><b>Changed</b></td><td>Script</td><td>91</td></tr>
-<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/added.js`</td><td><b>Added</b></td><td>Script</td><td>76</td></tr>
-<tr><td>`https://secutils.dev/api/webhooks/ar/[YOUR UNIQUE ID]/removed.js`</td><td><b>Removed</b></td><td>Script</td><td>78</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/no-change.js`</td><td><b>-</b></td><td>Script</td><td>81</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/changed.js`</td><td><b>Changed</b></td><td>Script</td><td>91</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/added.js`</td><td><b>Added</b></td><td>Script</td><td>76</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/removed.js`</td><td><b>Removed</b></td><td>Script</td><td>78</td></tr>
 </tbody>
 </table>
 
@@ -367,7 +407,7 @@ Watch the video demo below to see all the steps mentioned earlier in action:
 
 In this guide, you will create a web page resource tracker for the Reddit home page and learn how to track only specific resources:
 
-1. Navigate to [Web Scraping → Resources Trackers](https://secutils.dev/ws/web_scraping__resources) and click **Track resources** button
+1. Navigate to [Web Scraping → Resources trackers](https://secutils.dev/ws/web_scraping__resources) and click **Track resources** button
 2. Configure a new tracker with the following values:
 
 <table class="su-table">
@@ -376,7 +416,7 @@ In this guide, you will create a web page resource tracker for the Reddit home p
 <td><b>Name</b></td>
 <td>
 ```
-Reddit
+GitHub
 ```
 </td>
 </tr>
@@ -384,7 +424,7 @@ Reddit
 <td><b>URL</b></td>
 <td>
 ```
-https://reddit.com/?rev=1
+https://github.com/?rev=1
 ```
 </td>
 </tr>
@@ -399,9 +439,9 @@ Note that every time you change the tracker's URL, all previously fetched resour
 
 3. Click on the **Save** button to save the tracker
 4. Once the tracker is set up, it will appear in the trackers grid
-5. Expand the tracker's row and click on the **Fetch resources** button to make the first snapshot of the web page resources
-6. Once the tracker has fetched the resources, they will appear in the resources grid. You'll notice that there are nearly two hundred resources used for the Reddit home page! In the case of large and complex pages like this one, it's recommended to have multiple separate trackers, e.g. one per logical functionality domain, to avoid overwhelming the developer with too many resources and consequently changes they might need to track. Let's say we're only interested in resources that are used for the Single-Sign-On (SSO) functionality.
-7. To filter out all resources that are not related to SSO, we'll use the `Resource filter/mapper` feature. Click on the pencil icon next to the tracker's name to edit the tracker and update the following properties:
+5. Expand the tracker's row and click on the **Update** button to make the first snapshot of the web page resources
+6. Once the tracker has fetched the resources, they will appear in the resources grid. You'll notice that there are nearly 80 resources used for the GitHub home page! In the case of large and complex pages like this one, it's recommended to have multiple separate trackers, e.g. one per logical functionality domain, to avoid overwhelming the developer with too many resources and consequently changes they might need to track. Let's say we're only interested in "vendored" resources.
+7. To filter out all resources that are not "vendored", we'll use the `Resource filter/mapper` feature. Click on the pencil icon next to the tracker's name to edit the tracker and update the following properties:
 
 <table class="su-table">
 <tbody>
@@ -409,7 +449,7 @@ Note that every time you change the tracker's URL, all previously fetched resour
 <td><b>URL</b></td>
 <td>
 ```
-https://reddit.com/?rev=2
+https://github.com/?rev=2
 ```
 </td>
 </tr>
@@ -418,7 +458,7 @@ https://reddit.com/?rev=2
 <td>
 
 ```javascript
-return resource.url?.includes('sso')
+return resource.url?.includes('vendors')
   ? resource
   : null;
 ```
@@ -429,7 +469,7 @@ return resource.url?.includes('sso')
 
 8. The **Resource filter/mapper** property accepts a JavaScript function that is executed for each resource detected by the tracker. The function receives a single `resource` argument, which is the resource object. The function must return either the resource object or `null`. If the function returns `null`, the resource will be filtered out and will not be tracked. In our case, we're filtering out all resources that do not contain sso in their URL. You can learn more about resource filter/mapper scripts in the [**Annex: Resource filter/mapper script examples**](#annex-resource-filtermapper-script-examples) section.
 9. Now, click on the **Save** button to save the tracker.
-10. Click the **Fetch resources** button to re-fetch web page resources. Once the tracker has re-fetched resources, only a couple of resources with `sso` in the URL will appear in the resources grid.
+10. Click the **Update** button to re-fetch web page resources. Once the tracker has re-fetched resources, only about half of the previously extracted resources will appear in the resources grid.
 
 Watch the video demo below to see all the steps mentioned earlier in action:
 

@@ -7,13 +7,13 @@ sidebar_label: Webhooks
 
 A **webhook** is a mechanism that enables an application to receive automatic notifications or data updates by sending a request to a specified URL when a particular event or trigger occurs.
 
-There are various types of webhooks that serve different purposes. One such type is the auto-responder, which is a special webhook that responds to requests with a certain predefined response. An auto-responder is a handy tool when you need to simulate an HTTP endpoint that's not yet implemented or even create a quick ["honeypot"](https://en.wikipedia.org/wiki/Honeypot_(computing)) endpoint.
+There are various types of webhooks that serve different purposes. One such type is the responder, which is a special webhook that responds to requests with a certain predefined response. A responder is a handy tool when you need to simulate an HTTP endpoint that's not yet implemented or even create a quick ["honeypot"](https://en.wikipedia.org/wiki/Honeypot_(computing)) endpoint. Responders can also serve as a quick and easy way to test HTML, JavaScript, and CSS code.
 
 On this page, you can find several guides on how to create different types of responders.
 
-:::tip TIP
+:::tip NOTE
 
-Responders can also serve as a quick and easy way to test HTML, JavaScript, and CSS code.
+Each user on  [**secutils.dev**](https://secutils.dev) is assigned a randomly generated dedicated subdomain. This subdomain can host user-specific responders at any path, including the root path. For instance, if your dedicated subdomain is `abcdefg`, creating a responder at `/my-responder` would make it accessible via `https://abcdefg.webhooks.secutils.dev/my-responder`.
 
 :::
 
@@ -30,9 +30,18 @@ In this guide you'll create a simple responder that returns a static HTML page:
 <td><b>Name</b></td>
 <td>
 ```
-html-responder
+HTML Responder
 ```
-</td></tr>
+</td>
+</tr>
+<tr>
+<td><b>Path</b></td>
+<td>
+```
+/html-responder
+```
+</td>
+</tr>
 <tr>
 <td><b>Method</b></td>
 <td>
@@ -92,9 +101,17 @@ In this guide you'll create a simple responder that returns a JSON value:
 <td><b>Name</b></td>
 <td>
 ```
-json-responder
+JSON Responder
 ```
 </td></tr>
+<tr>
+<td><b>Path</b></td>
+<td>
+```
+/json-responder
+```
+</td>
+</tr>
 <tr>
 <td><b>Method</b></td>
 <td>
@@ -150,9 +167,18 @@ In this guide, you'll create a responder that returns an HTML page with custom I
 <td><b>Name</b></td>
 <td>
 ```
-notion-honeypot
+Notion Honeypot
 ```
-</td></tr>
+</td>
+</tr>
+<tr>
+<td><b>Path</b></td>
+<td>
+```
+/notion-honeypot
+```
+</td>
+</tr>
 <tr>
 <td><b>Tracking</b></td>
 <td>

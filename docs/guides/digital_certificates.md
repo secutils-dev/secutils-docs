@@ -15,7 +15,7 @@ On this page, you can find guides on creating digital certificate templates with
 
 In this guide you'll create a template for generating a private key and self-signed certificate for a Node.js HTTPS server:
 
-1. Navigate to [Digital Certificates → Self-signed certificates](https://secutils.dev/ws/certificates__self_signed_certificates) and click **Create certificate template** button
+1. Navigate to [Digital Certificates → Certificate templates](https://secutils.dev/ws/certificates__certificate_templates) and click **Create certificate template** button
 2. Configure a new certificate template with the following values:
 
 <table class="su-table">
@@ -175,7 +175,7 @@ Watch the video demo below to see all the steps mentioned earlier in action:
 
 In this guide, you will generate a private key in PKCS#8 format and then export it to a JSON Web Key (JWK) using a custom responder and the browser's built-in Web Crypto API:
 
-1. Navigate to [Digital Certificates → Self-signed certificates](https://secutils.dev/ws/certificates__self_signed_certificates) and click **Create certificate template** button
+1. Navigate to [Digital Certificates → Certificate templates](https://secutils.dev/ws/certificates__certificate_templates) and click **Create certificate template** button
 2. Configure a new certificate template with the following values:
 
 <table class="su-table">
@@ -225,8 +225,24 @@ End Entity
 
 3. Click on the **Save** button to save the certificate template
 4. Once the template is set up, it will appear in the templates grid
-5. Now, navigate to [Webhooks → Responders](https://secutils.dev/ws/webhooks__responders) and click **Create responder** button
-6. Configure a new responder with the following values:
+5. Click on the template's **Generate** button and use the following values for generation:
+
+<table class="su-table">
+<tbody>
+<tr>
+<td><b>Format</b></td>
+<td>
+```
+PKCS#8 (private key only)
+```
+</td>
+</tr>
+</tbody>
+</table>
+
+6. Click on the **Generate** button to generate and download the private key as `jwk.p8`
+7. Now, navigate to [Webhooks → Responders](https://secutils.dev/ws/webhooks__responders) and click **Create responder** button
+8. Configure a new responder with the following values:
 
 <table class="su-table">
 <tbody>
@@ -234,9 +250,18 @@ End Entity
 <td><b>Name</b></td>
 <td>
 ```
-subtle-crypto
+Subtle Crypto
 ```
-</td></tr>
+</td>
+</tr>
+<tr>
+<td><b>Path</b></td>
+<td>
+```
+/subtle-crypto
+```
+</td>
+</tr>
 <tr>
 <td><b>Method</b></td>
 <td>
@@ -264,55 +289,58 @@ Content-Type: text/html; charset=utf-8
 <head>
   <title>Subtle Crypto</title>
   <style>
-    h1 { text-align: center }
+    .center { text-align: center }
     pre {
       outline: 1px solid #ccc;
       padding: 5px;
-      margin: auto;
+      margin: 1em auto;
       width: 30%;
       overflow: hidden;
       text-overflow: ellipsis;
     }
   </style>
   <script type="text/javascript">
-    (async function main() {
-      // Call certificate/key pair "Generate" API.
-      const response = await fetch("/api/utils/action", {
-        method: "POST",
-        credentials: "same-origin",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({
-          action: {
-            type: "certificates",
-            value: {
-              type: "generateSelfSignedCertificate",
-              value: { templateName: "jwk", format: "pkcs8" }
-            }
-          }
-        })
+    document.addEventListener("DOMContentLoaded", async function main() {
+      document.getElementById("p8_upload").addEventListener("change", (e) => {
+        if (e.target.files.length === 0) {
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = async () => {
+          // Import generated PKCS#8 key as SubtleCrypto's CryptoKey.
+          const cryptoKey = await window.crypto.subtle.importKey(
+              "pkcs8",
+              new Uint8Array(reader.result),
+              { name: "ECDSA", namedCurve: "P-384" },
+              true,
+              ["sign"]
+          )
+
+          // Export CryptoKey as JWK and render it.
+          document.getElementById("jwk").textContent = JSON.stringify(
+              await window.crypto.subtle.exportKey('jwk', cryptoKey),
+              null,
+              2
+          );
+        };
+        reader.readAsArrayBuffer(e.target.files[0]);
       });
-
-      // Import generated PKCS#8 key as SubtleCrypto's CryptoKey.
-      const cryptoKey = await window.crypto.subtle.importKey(
-          "pkcs8",
-          new Uint8Array((await response.json()).value.value.certificate),
-          { name: "ECDSA", namedCurve: "P-384" },
-          true,
-          ["sign"]
-      )
-
-      // Export CryptoKey as JWK and render it.
-      document.getElementById("jwk").textContent = JSON.stringify(
-          await window.crypto.subtle.exportKey('jwk', cryptoKey),
-          null,
-          2
-      );
-    })();
+    });
   </script>
 </head>
 <body>
-<h1>PKCS#8 ➡ JSON Web Key (JWK)</h1>
-<pre id="jwk">Loading...</pre>
+<h1 class="center">PKCS#8 ➡ JSON Web Key (JWK)</h1>
+<div class="center">
+  <label for="p8_upload">Choose PKCS#8 key (*.p8)</label>
+  <input
+      type="file"
+      id="p8_upload"
+      name="p8_upload"
+      accept=".p8" />
+  <br />
+</div>
+<pre id="jwk">No PKCS#8 key is loaded yet...</pre>
 </body>
 </html>
 ```
@@ -321,9 +349,9 @@ Content-Type: text/html; charset=utf-8
 </tbody>
 </table>
 
-7. Click on the **Save** button to save the responder
-8. Once the responder is set up, it will appear in the responders grid along with its unique URL
-9. Click on the responder's URL and observe that it renders a JSON Web Key (JWK) derived from your ECDSA key template
+9. Click on the **Save** button to save the responder
+10. Once the responder is set up, it will appear in the responders grid along with its unique URL
+11. Click on the responder's URL, upload the `jwk.p8` file downloaded at the step 6, and observe that it renders a JSON Web Key (JWK) derived from your ECDSA key
 
 Watch the video demo below to see all the steps mentioned earlier in action:
 
