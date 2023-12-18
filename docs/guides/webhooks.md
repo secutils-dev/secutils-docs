@@ -77,9 +77,9 @@ Content-Type: text/html; charset=utf-8
 </tbody>
 </table>
 
-3. Click on the **Save** button to save the responder
+3. Click the **Save** button to save the responder
 4. Once the responder is set up, it will appear in the responders grid along with its unique URL
-5. Click on the responder's URL and observe that it renders text `Hello World`
+5. Click the responder's URL and observe that it renders text `Hello World`
 
 Watch the video demo below to see all the steps mentioned earlier in action:
 
@@ -143,9 +143,9 @@ Content-Type: application/json
 </tbody>
 </table>
 
-3. Click on the **Save** button to save the responder
+3. Click the **Save** button to save the responder
 4. Once the responder is set up, it will appear in the responders grid along with its unique URL
-5. Click on the responder's URL and use an HTTP client, like **cURL**, to verify that it returns a JSON value
+5. Click the responder's URL and use an HTTP client, like **cURL**, to verify that it returns a JSON value
 
 Watch the video demo below to see all the steps mentioned earlier in action:
 
@@ -218,7 +218,7 @@ Content-Type: text/html; charset=utf-8
 </tbody>
 </table>
 
-3. Click on the **Save** button to save the responder
+3. Click the **Save** button to save the responder
 4. Once the responder is set up, it will appear in the responders grid along with its unique URL
 5. Copy responder's URL and try to create a bookmark for it in Notion
 6. Note that the bookmark includes both the description and image retrieved from the rich meta-tags returned by the responder

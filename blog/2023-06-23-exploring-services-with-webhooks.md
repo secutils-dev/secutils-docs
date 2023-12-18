@@ -73,7 +73,7 @@ Content-Type: text/html; charset=utf-8
 </tbody>
 </table>
 
-3. Click on the **Save** button to save the responder
+3. Click the **Save** button to save the responder
 4. Once the responder is set up, it will appear in the responders grid along with its unique URL
 5. Copy responder's URL and try to create a bookmark for it in Notion
 

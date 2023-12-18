@@ -87,9 +87,9 @@ localhost
 </tbody>
 </table>
 
-3. Click on the **Save** button to save the certificate template
+3. Click the **Save** button to save the certificate template
 4. Once the template is set up, it will appear in the templates grid
-5. Click on the template's **Generate** button and use the following values for generation:
+5. Click the template's **Generate** button and use the following values for generation:
 
 <table class="su-table">
 <tbody>
@@ -112,7 +112,7 @@ pass
 </tbody>
 </table>
 
-6. Click on the **Generate** button to generate and download the certificate bundle
+6. Click the **Generate** button to generate and download the certificate bundle
 7. Use the downloaded `https-server.pfx` file to configure Node.js HTTPS server:
 
 ```js title="index.js"
@@ -223,9 +223,9 @@ End Entity
 </tbody>
 </table>
 
-3. Click on the **Save** button to save the certificate template
+3. Click the **Save** button to save the certificate template
 4. Once the template is set up, it will appear in the templates grid
-5. Click on the template's **Generate** button and use the following values for generation:
+5. Click the template's **Generate** button and use the following values for generation:
 
 <table class="su-table">
 <tbody>
@@ -240,7 +240,7 @@ PKCS#8 (private key only)
 </tbody>
 </table>
 
-6. Click on the **Generate** button to generate and download the private key as `jwk.p8`
+6. Click the **Generate** button to generate and download the private key as `jwk.p8`
 7. Now, navigate to [Webhooks → Responders](https://secutils.dev/ws/webhooks__responders) and click **Create responder** button
 8. Configure a new responder with the following values:
 
@@ -349,7 +349,7 @@ Content-Type: text/html; charset=utf-8
 </tbody>
 </table>
 
-9. Click on the **Save** button to save the responder
+9. Click the **Save** button to save the responder
 10. Once the responder is set up, it will appear in the responders grid along with its unique URL
 11. Click on the responder's URL, upload the `jwk.p8` file downloaded at the step 6, and observe that it renders a JSON Web Key (JWK) derived from your ECDSA key
 

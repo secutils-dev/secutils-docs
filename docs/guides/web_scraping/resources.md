@@ -39,9 +39,9 @@ https://news.ycombinator.com
 </tbody>
 </table>
 
-3. Click on the **Save** button to save the tracker
+3. Click the **Save** button to save the tracker
 4. Once the tracker is set up, it will appear in the trackers grid
-5. Expand the tracker's row and click on the **Update** button to make the first snapshot of the web page resources 
+5. Expand the tracker's row and click the **Update** button to make the first snapshot of the web page resources 
 
 It's hard to believe, but as of the time of writing, Hacker News continues to rely on just a single script and stylesheet!
 
@@ -281,7 +281,7 @@ Content-Type: text/html; charset=utf-8
 </tbody>
 </table>
 
-4. Click on the **Save** button to save the responder
+4. Click the **Save** button to save the responder
 5. Once the responder is set up, it will appear in the responders grid along with its unique URL
 6. Click on the responder's URL and make sure that it renders the following content:
 
@@ -334,9 +334,9 @@ Daily
 Configured tracker will fetch the resources of the `track-me.html` responder once a day and notify you if any changes are detected. You can change the frequency and notification settings to suit your needs.
 :::
 
-9. Click on the **Save** button to save the tracker
+9. Click the **Save** button to save the tracker
 10. Once the tracker is set up, it will appear in the trackers grid
-11. Expand the tracker's row and click on the **Update** button to make the first snapshot of the web page resources
+11. Expand the tracker's row and click the **Update** button to make the first snapshot of the web page resources
 12. Once the tracker has fetched the resources, they will appear in the resources grid:
 
 <table class="su-table">
@@ -437,11 +437,11 @@ Normally, Secutils.dev caches web page resources for **10 minutes**. This means 
 Note that every time you change the tracker's URL, all previously fetched resources **will be removed**.
 :::
 
-3. Click on the **Save** button to save the tracker
+3. Click the **Save** button to save the tracker
 4. Once the tracker is set up, it will appear in the trackers grid
-5. Expand the tracker's row and click on the **Update** button to make the first snapshot of the web page resources
+5. Expand the tracker's row and click the **Update** button to make the first snapshot of the web page resources
 6. Once the tracker has fetched the resources, they will appear in the resources grid. You'll notice that there are nearly 80 resources used for the GitHub home page! In the case of large and complex pages like this one, it's recommended to have multiple separate trackers, e.g. one per logical functionality domain, to avoid overwhelming the developer with too many resources and consequently changes they might need to track. Let's say we're only interested in "vendored" resources.
-7. To filter out all resources that are not "vendored", we'll use the `Resource filter/mapper` feature. Click on the pencil icon next to the tracker's name to edit the tracker and update the following properties:
+7. To filter out all resources that are not "vendored", we'll use the `Resource filter/mapper` feature. Click the pencil icon next to the tracker's name to edit the tracker and update the following properties:
 
 <table class="su-table">
 <tbody>
@@ -468,7 +468,7 @@ return resource.url?.includes('vendors')
 </table>
 
 8. The **Resource filter/mapper** property accepts a JavaScript function that is executed for each resource detected by the tracker. The function receives a single `resource` argument, which is the resource object. The function must return either the resource object or `null`. If the function returns `null`, the resource will be filtered out and will not be tracked. In our case, we're filtering out all resources that do not contain sso in their URL. You can learn more about resource filter/mapper scripts in the [**Annex: Resource filter/mapper script examples**](#annex-resource-filtermapper-script-examples) section.
-9. Now, click on the **Save** button to save the tracker.
+9. Now, click the **Save** button to save the tracker.
 10. Click the **Update** button to re-fetch web page resources. Once the tracker has re-fetched resources, only about half of the previously extracted resources will appear in the resources grid.
 
 Watch the video demo below to see all the steps mentioned earlier in action:
