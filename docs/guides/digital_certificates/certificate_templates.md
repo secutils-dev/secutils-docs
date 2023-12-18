@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-sidebar_label: Digital Certificates
+sidebar_position: 1
+sidebar_label: Certificate Templates
 ---
 
 # What is a digital certificate?
@@ -167,8 +167,8 @@ Hello World
 Watch the video demo below to see all the steps mentioned earlier in action:
 
 <video controls preload="metadata" width="100%">
-  <source src="../video/guides/certificates_https_server.webm" type="video/webm" />
-  <source src="../video/guides/certificates_https_server.mp4" type="video/mp4" />
+  <source src="../../video/guides/digital_certificates_certificate_templates_https_server.webm" type="video/webm" />
+  <source src="../../video/guides/digital_certificates_certificate_templates_https_server.mp4" type="video/mp4" />
 </video>
 
 ## Export a private key as a JSON Web Key (JWK)
@@ -356,6 +356,23 @@ Content-Type: text/html; charset=utf-8
 Watch the video demo below to see all the steps mentioned earlier in action:
 
 <video controls preload="metadata" width="100%">
-  <source src="../video/guides/certificates_jwk_export.webm" type="video/webm" />
-  <source src="../video/guides/certificates_jwk_export.mp4" type="video/mp4" />
+  <source src="../../video/guides/digital_certificates_certificate_templates_jwk_export.webm" type="video/webm" />
+  <source src="../../video/guides/digital_certificates_certificate_templates_jwk_export.mp4" type="video/mp4" />
+</video>
+
+## Share a certificate template
+
+This guide will walk you through sharing a certificate template publicly, allowing anyone on the internet to view it:
+
+1. Navigate to [Digital Certificates → Certificate templates](https://secutils.dev/ws/certificates__certificate_templates) and pick the template you'd like to share
+2. Click the template's **Share template** button and toggle **Share template** switch to **on** position
+3. Once the template is shared, the dialog will show a **Copy link** button
+4. Click the **Copy link** button to copy a unique shared template link to your clipboard
+5. To stop sharing the template, click the **Share template** button again, and switch the **Share template** toggle to the **off** position.
+
+Watch the video demo below to see all the steps mentioned earlier in action:
+
+<video controls preload="metadata" width="100%">
+  <source src="../../video/guides/digital_certificates_certificate_templates_template_share.webm" type="video/webm" />
+  <source src="../../video/guides/digital_certificates_certificate_templates_template_share.mp4" type="video/mp4" />
 </video>

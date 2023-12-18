@@ -2,7 +2,7 @@
   "label": "Guides",
   "collapsed": false,
   "collapsible": false,
-  "position": 3,
+  "position": 2,
   "link": {
     "type": "generated-index",
     "description": "Learn the most important Secutils.dev functionality."
