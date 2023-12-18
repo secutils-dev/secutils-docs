@@ -80,6 +80,92 @@ Watch the video demo below to see all the steps mentioned earlier in action:
   <source src="../../video/guides/web_security_csp_new_policy.mp4" type="video/mp4" />
 </video>
 
+## Import a Content Security Policy from URL
+
+In this guide you'll import a Content Security Policy from an external URL:
+
+1. Navigate to [Web Security → CSP → Policies](https://secutils.dev/ws/web_security__csp__policies) and click **Import policy** button
+2. Pick **URL** tab and use the following values for import:
+
+<table class="su-table">
+<tbody>
+<tr>
+<td><b>Policy name</b></td>
+<td>
+```
+Google CSP
+```
+</td>
+</tr>
+<tr>
+<td><b>URL</b></td>
+<td>
+```
+https://google.com
+```
+</td>
+</tr>
+<tr>
+<td><b>Policy source</b></td>
+<td>
+```
+HTTP header (report only)
+```
+</td>
+</tr>
+</tbody>
+</table>
+
+3. Click on the **Import** button to import the policy
+4. Once the policy is imported, it will appear in the policies grid
+5. Refer to the **Policy** grid column or policy edit flyout to view the content of the imported policy
+
+Watch the video demo below to see all the steps mentioned earlier in action:
+
+<video controls preload="metadata" width="100%">
+  <source src="../../video/guides/web_security_csp_import_policy_url.webm" type="video/webm" />
+  <source src="../../video/guides/web_security_csp_import_policy_url.mp4" type="video/mp4" />
+</video>
+
+## Import a Content Security Policy from a string
+
+In this guide you'll import a Content Security Policy from a string (serialized policy text):
+
+1. Navigate to [Web Security → CSP → Policies](https://secutils.dev/ws/web_security__csp__policies) and click **Import policy** button
+2. Pick **Serialized policy** tab and use the following values for import:
+
+<table class="su-table">
+<tbody>
+<tr>
+<td><b>Policy name</b></td>
+<td>
+```
+Custom CSP
+```
+</td>
+</tr>
+<tr>
+<td><b>Serialized policy</b></td>
+<td>
+```
+default-src 'self' api.secutils.dev; style-src 'self' fonts.googleapis.com
+```
+</td>
+</tr>
+</tbody>
+</table>
+
+3. Click on the **Import** button to import the policy
+4. Once the policy is imported, it will appear in the policies grid
+5. Refer to the **Policy** grid column or policy edit flyout to view the content of the imported policy
+
+Watch the video demo below to see all the steps mentioned earlier in action:
+
+<video controls preload="metadata" width="100%">
+  <source src="../../video/guides/web_security_csp_import_policy_string.webm" type="video/webm" />
+  <source src="../../video/guides/web_security_csp_import_policy_string.mp4" type="video/mp4" />
+</video>
+
 ## Test a Content Security Policy
 
 In this guide, you will create a Content Security Policy and test it using a custom HTML responder:
