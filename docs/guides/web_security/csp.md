@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Content Security Policy
+sidebar_label: Content Security Policies
 ---
 
 # What is a Content Security Policy?
@@ -260,7 +260,7 @@ CSP Test
 9. Once the policy is set up, it will appear in the policies grid
 10. Click the policy's **Copy policy** button and use **Policy source** dropdown to switch to **HTML meta tag** policy representation
 11. Copy `<meta>` HTML tag with the policy and navigate to [Webhooks → Responders](https://secutils.dev/ws/webhooks__responders) again
-12. Edit **Body** property of the previously created **csp-test** responder to include `<meta>` HTML tag with the policy inside `<head>` HTML tag
+12. Edit **Body** property of the previously created **CSP Test** responder to include `<meta>` HTML tag with the policy inside `<head>` HTML tag
 13. Click the **Save** button and navigate to the responder's URL again
 14. This time, when you click the **Eval** button, nothing happens and an error message is logged in the browser console meaning that you have successfully forbidden **eval()** with the Content Security Policy
 

@@ -7,6 +7,10 @@ sidebar_label: Content Trackers
 
 The web page content tracker is a utility that empowers developers to detect and monitor the content of any web page. Alongside [web page resources trackers](./resources.md), it falls under the category of [synthetic monitoring](https://en.wikipedia.org/wiki/Synthetic_monitoring) tools. However, it extends its capabilities to cover a broader set of use cases. These range from ensuring that the deployed application loads only the intended content throughout its lifecycle to tracking changes in arbitrary web content when the application lacks native tracking capabilities. In the event of a change, whether it's caused by a broken deployment or a legitimate content modification, the tracker promptly notifies the user.
 
+:::caution NOTE
+Currently, Secutils.dev doesn't support tracking content for web pages protected by application firewalls (WAF) or any form of CAPTCHA. If you require tracking content for such pages, please comment on [#secutils/34](https://github.com/secutils-dev/secutils/issues/34) to discuss your use case.
+:::
+
 On this page, you can find guides on creating and using web page content trackers.
 
 :::note
@@ -212,6 +216,10 @@ console.log(foo(5));
 
 ### Track API response
 You can use content tracker to track API responses as well (until dedicated [`API tracker` utility](https://github.com/secutils-dev/secutils/issues/32) is released). For instance, you can track the response of the [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API:
+
+:::caution NOTE
+Ensure that the web page from which you're making a fetch request allows cross-origin requests. Otherwise, you'll get an error.
+:::
 
 ```javascript
 const { url, method, headers, body } = {

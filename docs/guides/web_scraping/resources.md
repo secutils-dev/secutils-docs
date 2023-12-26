@@ -9,6 +9,10 @@ The web page resources tracker is a utility that gives developers the ability to
 
 Additionally, security researchers focused on discovering potential security vulnerabilities in third-party web applications can use web page resources trackers. By being notified when the application's resources change, researchers can identify if the application has been upgraded, providing an opportunity to re-examine the application and potentially discover new vulnerabilities.
 
+:::caution NOTE
+Currently, Secutils.dev doesn't support tracking resources for web pages protected by application firewalls (WAF) or any form of CAPTCHA. If you require tracking resources for such pages, please comment on [#secutils/34](https://github.com/secutils-dev/secutils/issues/34) to discuss your use case.
+:::
+
 On this page, you can find guides on creating and using web page resources trackers.
 
 ## Create a web page resources tracker
@@ -307,7 +311,7 @@ Demo
 <td><b>URL</b></td>
 <td>
 ```
-https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/track-me.html
+https://[YOUR UNIQUE ID].webhooks.secutils.dev/track-me.html
 ```
 </td>
 </tr>
@@ -342,9 +346,9 @@ Configured tracker will fetch the resources of the `track-me.html` responder onc
 <table class="su-table">
 <tbody>
 <tr><th>Source</th><th>Diff</th><th>Type</th><th>Size</th></tr>
-<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/no-change.js`</td><td>-</td><td>Script</td><td>81</td></tr>
-<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/changed.js`</td><td>-</td><td>Script</td><td>91</td></tr>
-<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/removed.js`</td><td>-</td><td>Script</td><td>78</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.secutils.dev/no-change.js`</td><td>-</td><td>Script</td><td>81</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.secutils.dev/changed.js`</td><td>-</td><td>Script</td><td>91</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.secutils.dev/removed.js`</td><td>-</td><td>Script</td><td>78</td></tr>
 </tbody>
 </table>
 
@@ -389,10 +393,10 @@ Normally, Secutils.dev caches web page resources for **10 minutes**. This means 
 <table class="su-table">
 <tbody>
 <tr><th>Source</th><th>Diff</th><th>Type</th><th>Size</th></tr>
-<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/no-change.js`</td><td><b>-</b></td><td>Script</td><td>81</td></tr>
-<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/changed.js`</td><td><b>Changed</b></td><td>Script</td><td>91</td></tr>
-<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/added.js`</td><td><b>Added</b></td><td>Script</td><td>76</td></tr>
-<tr><td>`https://[YOUR UNIQUE ID].webhooks.dev.secutils.dev/removed.js`</td><td><b>Removed</b></td><td>Script</td><td>78</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.secutils.dev/no-change.js`</td><td><b>-</b></td><td>Script</td><td>81</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.secutils.dev/changed.js`</td><td><b>Changed</b></td><td>Script</td><td>91</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.secutils.dev/added.js`</td><td><b>Added</b></td><td>Script</td><td>76</td></tr>
+<tr><td>`https://[YOUR UNIQUE ID].webhooks.secutils.dev/removed.js`</td><td><b>Removed</b></td><td>Script</td><td>78</td></tr>
 </tbody>
 </table>
 
