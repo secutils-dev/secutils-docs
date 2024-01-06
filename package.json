@@ -20,21 +20,21 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.0.1",
-    "@docusaurus/preset-classic": "^3.0.1",
-    "@docusaurus/theme-mermaid": "^3.0.1",
+    "@docusaurus/core": "^3.1.0",
+    "@docusaurus/preset-classic": "^3.1.0",
+    "@docusaurus/theme-mermaid": "^3.1.0",
     "@mdx-js/react": "^3.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.3",
-    "@commitlint/config-conventional": "^18.4.3",
-    "@docusaurus/module-type-aliases": "^3.0.1",
-    "@docusaurus/tsconfig": "^3.0.1",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@docusaurus/module-type-aliases": "^3.1.0",
+    "@docusaurus/tsconfig": "^3.1.0",
     "husky": "^8.0.3",
     "typescript": "^5.3.3"
   },
