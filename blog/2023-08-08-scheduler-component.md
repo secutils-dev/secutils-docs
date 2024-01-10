@@ -14,6 +14,21 @@ As you might have learned from the [**"A Plan for the Q3 2023 Iteration"**](http
 
 The scheduler is going to be one of the most important components of Secutils.dev. It will handle regular resource checks, monitor HTTP response headers and content security policy (CSP), manage user notifications, and much more. Therefore, it needs to be performant, reliable, and flexible.
 
+:::note __UPDATE (Jan 10th, 2024)__
+
+Since the initial version of this post, I've successfully integrated the scheduler into [**Secutils.dev**](https://secutils.dev) components:
+
+- [**Web Scraping → Resources trackers**](/docs/guides/web_scraping/resources) utility that gives developers the ability to detect and track resources of any web page
+- [**Web Scraping → Content trackers**](/docs/guides/web_scraping/content) utility that allows developers to detect and monitor the content of **any** web page
+- **Platform → Notifications** component that handles all notifications sent by Secutils.dev
+
+Everything seems to be functioning smoothly!
+
+Recently, I've added support for scheduler job retries (constant, exponential, and linear backoff strategies). For further details and the UI built for this functionality, check out the [**v1.0.0-alpha.4 release**](https://github.com/secutils-dev/secutils/releases/tag/v1.0.0-alpha.4) in the release notes.
+
+If you're looking for inspiration to build your own scheduler-like component in Rust or want to learn how to write unit tests for it, feel free to explore the source code at [**#secutils-dev/secutils/scheduler**](https://github.com/secutils-dev/secutils/tree/main/src/scheduler).
+:::
+
 ## Performance
 
 To achieve the best performance with minimal overhead, the scheduler should be tightly integrated with the main Secutils.dev server. This way, it can be reused for any functionality that requires repetitive or scheduled asynchronous work. After considering different options, I figured that implementing the scheduler as a part of the Secutils.dev server itself in Rust would provide the lowest overhead.
