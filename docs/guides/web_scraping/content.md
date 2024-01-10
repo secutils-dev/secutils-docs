@@ -158,7 +158,7 @@ In this section, you can find examples of content extractor scripts that extract
 The `context` argument has the following interface:
 
 ```typescript
-export interface Context {
+interface Context {
   // The context extracted during the previous execution, if available.
   previous?: T;
   // HTTP response headers returned for the loaded web page.

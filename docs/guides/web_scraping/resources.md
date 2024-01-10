@@ -489,7 +489,7 @@ In this section, you can find examples of resource filter and mapper scripts tha
 The `resource` argument has the following interface:
 
 ```typescript
-export interface Resource {
+interface Resource {
   // Resource full URL. This property is not defined for inline resources. 
   url?: string;
   // Resource content.
