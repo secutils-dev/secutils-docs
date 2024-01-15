@@ -14,7 +14,7 @@ Today, I'd like to provide an overview of the technology stack powering [**Secut
 <!--truncate-->
 
 <div class="text--center">
-  <a href="/blog/beta-release"><strong>🚀 Secutils.dev beta release is now public, click here to read more</strong></a>
+  <a href="/docs/blog/beta-release"><strong>🚀 Secutils.dev beta release is now public, click here to read more</strong></a>
 </div>
 
 ---
