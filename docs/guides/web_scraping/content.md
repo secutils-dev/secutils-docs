@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 sidebar_label: Content Trackers
+title: Web Scraping ➔ Web page content trackers
+description: Learn how to create and use web page content trackers in Secutils.dev.
 ---
 
 # What is a web page content tracker?

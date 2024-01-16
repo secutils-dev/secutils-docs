@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 sidebar_label: Resources Trackers
+title: Web Scraping ➔ Web page resources trackers
+description: Learn how to create and use web page resources trackers in Secutils.dev.
 ---
 
 # What is a web page resources tracker?

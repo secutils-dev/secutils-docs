@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 sidebar_label: Private Keys
+title: Digital Certificates ➔ Private keys
+description: Learn how to create and use private keys in Secutils.dev.
 ---
 
 # What is a private key?

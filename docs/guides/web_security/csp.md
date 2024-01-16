@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 sidebar_label: Content Security Policies
+title: Web Security ➔ Content security policies (CSP)
+description: Learn how to create and use content security policies (CSP) in Secutils.dev.
 ---
 
 # What is a Content Security Policy?

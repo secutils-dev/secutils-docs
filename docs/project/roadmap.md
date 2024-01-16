@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+title: Roadmap
+description: Explore the upcoming features coming to Secutils.dev soon.
 ---
 
 # Roadmap

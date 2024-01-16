@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 sidebar_label: Webhooks
+title: Webhooks
+description: Learn how to create and use webhooks in Secutils.dev.
 ---
 
 # What is a webhook?

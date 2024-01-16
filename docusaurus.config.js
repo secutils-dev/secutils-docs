@@ -9,8 +9,8 @@ const URL = process.env.SECUTILS_URL ?? 'https://secutils.dev';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Secutils.dev Docs',
-  tagline: 'Documentation, user guides, and more...',
+  title: 'Secutils.dev',
+  tagline: 'Documentation, user guides, video step-by-step instructions and more...',
   favicon: 'img/favicon.ico',
   url: URL,
   baseUrl: '/docs/',
@@ -47,12 +47,12 @@ const config = {
           editUrl: 'https://github.com/secutils-dev/secutils-docs/tree/main/',
         },
         blog: {
-          blogTitle: 'Secutils.dev Blog',
-          blogDescription: 'Secutils.dev Blog',
+          blogTitle: 'Blog',
+          blogDescription: 'Blog - an open-source, versatile, yet simple toolbox for security-minded engineers built by application security engineers.',
           postsPerPage: 6,
           feedOptions: {
             type: 'all',
-            title: 'Secutils.dev Blog',
+            title: 'Blog',
             copyright: `Copyright © ${new Date().getFullYear()} Secutils.dev`,
           },
         },

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 sidebar_label: Certificate Templates
+title: Digital Certificates ➔ Certificate templates
+description: Learn how to create and use digital certificate templates in Secutils.dev.
 ---
 
 # What is a digital certificate?
