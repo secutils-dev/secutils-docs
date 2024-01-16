@@ -1,6 +1,6 @@
 ---
 title: Running micro-SaaS for less than 1€ a month
-description: "Running Secutils.dev micro-SaaS for less than 1€ a month: GitHub, OCI, Elastic, Plausible, Let's Encrypt, Zoho."
+description: "Running micro-SaaS almost for free: GitHub, OCI, Elastic, Plausible, Let's Encrypt, Zoho."
 slug: running-micro-saas-for-less-than-one-euro-a-month
 authors: azasypkin
 image: https://secutils.dev/docs/img/blog/goal.png

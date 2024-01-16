@@ -1,6 +1,6 @@
 ---
 title: Building a scheduler for a Rust application
-description: "Building a scheduler for a Rust application: tokio, cron jobs, persistent storage, SQLite."
+description: "Building a scheduler for a Rust application: tokio, cron jobs, scheduler tests, job retries, persistent storage, SQLite."
 slug: scheduler-component
 authors: azasypkin
 image: https://secutils.dev/docs/img/blog/2023-08-08_scheduler_component_job_create.png

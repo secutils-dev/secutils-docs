@@ -1,6 +1,6 @@
 ---
 title: Detecting changes in JavaScript and CSS isn't an easy task, Part 2
-description: "Detecting changes in JavaScript and CSS isn't an easy task, Part 2: web scraping, Playwright, data and blob URLs, fuzzy hashing, TLSH, Locality Sensitive Hashing, and more!"
+description: "Detecting changes in JavaScript and CSS isn't an easy task: web scraping, Playwright, data and blob URLs, fuzzy hashing, TLSH, Locality Sensitive Hashing!"
 slug: detecting-changes-in-js-css-part-2
 authors: azasypkin
 image: https://secutils.dev/docs/img/blog/2023-07-13_web_page_resources.png
