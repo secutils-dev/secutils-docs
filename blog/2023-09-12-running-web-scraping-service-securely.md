@@ -1,6 +1,6 @@
 ---
 title: "Running web scraping service securely"
-description: "Running web scraping service securely - Chromium, Playwright, Puppeteer, Node.js, containers, Docker, Kubernetes, Network policies, seccomp, Chromium sandbox."
+description: "Running web scraping service securely - Playwright scraper, Node.js scraper, Docker containers, Kubernetes network policies for scraper, seccomp, Chromium sandbox."
 slug: running-web-scraping-service-securely
 authors: azasypkin
 image: https://secutils.dev/docs/img/blog/2023-09-12_running_web_scraping_service_securely.png
