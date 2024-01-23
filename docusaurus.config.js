@@ -5,14 +5,15 @@ const { themes } = require('prism-react-renderer');
 const lightTheme = themes.vsLight;
 const darkTheme = themes.vsDark;
 
-const URL = process.env.SECUTILS_URL ?? 'https://secutils.dev';
+const BASE_URL =
+    process.env.SECUTILS_ENV?.toLowerCase() === 'dev' ? 'https://dev.secutils.dev' : 'https://secutils.dev';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Secutils.dev',
   tagline: 'Documentation, user guides, video step-by-step instructions and more...',
   favicon: 'img/favicon.ico',
-  url: URL,
+  url: BASE_URL,
   baseUrl: '/docs/',
   baseUrlIssueBanner: true,
 
@@ -79,7 +80,7 @@ const config = {
           target: '_self',
           height: 24,
           width: 147,
-          href: URL,
+          href: BASE_URL,
         },
         items: [
           {
@@ -107,7 +108,7 @@ const config = {
         links: [
           {
             label: 'About',
-            href: `${URL}/about`,
+            href: `${BASE_URL}/about`,
           },
           {
             label: 'Blog',
@@ -119,11 +120,11 @@ const config = {
           },
           {
             label: 'Privacy',
-            href: `${URL}/privacy`,
+            href: `${BASE_URL}/privacy`,
           },
           {
             label: 'Terms',
-            href: `${URL}/terms`,
+            href: `${BASE_URL}/terms`,
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Secutils.dev`,

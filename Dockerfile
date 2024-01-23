@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 
 FROM --platform=$BUILDPLATFORM node:20-alpine3.19 as UI_BUILDER
-ARG SECUTILS_URL=https://secutils.dev
-ENV SECUTILS_URL $SECUTILS_URL
+ARG SECUTILS_ENV="prod"
+ENV SECUTILS_ENV=${SECUTILS_ENV}
 
 WORKDIR /app
 COPY ["./*.json", "./*.config.js", "./sidebars.js", "./"]
