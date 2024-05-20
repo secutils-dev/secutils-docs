@@ -13,7 +13,7 @@ COPY ["./docs", "./docs"]
 COPY ["./blog", "./blog"]
 RUN set -x && npm run build
 
-FROM nginxinc/nginx-unprivileged:alpine3.18-slim
+FROM nginxinc/nginx-unprivileged:alpine3.19-slim
 COPY --from=UI_BUILDER ["/app/build/", "/usr/share/nginx/html/docs"]
 COPY ["./config/nginx.conf", "/etc/nginx/conf.d/default.conf"]
 
