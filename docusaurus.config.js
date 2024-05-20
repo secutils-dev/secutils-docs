@@ -115,8 +115,12 @@ const config = {
             href: '/blog',
           },
           {
-            label: 'Documentation',
+            label: 'Docs',
             href: '/docs',
+          },
+          {
+            label: 'Pricing',
+            href: `${BASE_URL}/pricing`,
           },
           {
             label: 'Privacy',
