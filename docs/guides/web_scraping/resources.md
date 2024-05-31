@@ -551,3 +551,39 @@ if (!isGoogleAnalyticsResource) {
 const [urlWithoutQueryString] = resource.url.split('?');
 return { ...resource, url: urlWithoutQueryString };
 ```
+
+## Annex: Custom cron schedules
+
+:::caution NOTE
+Custom cron schedules are available only for [**Pro** subscription](https://secutils.dev/pricing) users.
+:::
+
+In this section, you can learn more about the supported cron expression syntax used to configure custom tracking schedules. A cron expression is a string consisting of six or seven subexpressions that describe individual details of the schedule. These subexpressions, separated by white space, can contain any of the allowed values with various combinations of the allowed characters for that subexpression:
+
+| Subexpression  | Mandatory | Allowed values  | Allowed special characters |
+|----------------|-----------|-----------------|----------------------------|
+| `Seconds`      | Yes       | 0-59            | * / , -                    |
+| `Minutes`      | Yes       | 0-59            | * / , -                    |
+| `Hours`        | Yes       | 0-23            | * / , -                    |
+| `Day of month` | Yes       | 1-31            | * / , - ?                  |
+| `Month`        | Yes       | 0-11 or JAN-DEC | * / , -                    |
+| `Day of week`  | Yes       | 1-7 or SUN-SAT  | * / , - ?                  |
+| `Year`         | No        | 1970-2099       | * / , -                    |
+
+Following the described cron syntax, you can create almost any schedule you want as long as the interval between two consecutive checks is **longer than 10 minutes**. Below are some examples of supported cron expressions:
+
+| Expression            | Meaning                                             |
+|-----------------------|-----------------------------------------------------|
+| `0 0 12 * * ?`        | Run at 12:00 (noon) every day                       |
+| `0 15 10 ? * *`       | Run at 10:15 every day                              |
+| `0 15 10 * * ?`       | Run at 10:15 every day                              |
+| `0 15 10 * * ? *`     | Run at 10:15 every day                              |
+| `0 15 10 * * ? 2025`  | Run at 10:15 every day during the year 2025         |
+| `0 0/10 14 * * ?`     | Run every 10 minutes from 14:00 to 14:59, every day |
+| `0 10,44 14 ? 3 WED`  | Run at 14:10 and at 14:44 every Wednesday in March  |
+| `0 15 10 ? * MON-FRI` | Run at 10:15 from Monday to Friday                  |
+| `0 11 15 8 10 ?`      | Run every October 8 at 15:11                        |
+
+To assist you in creating custom cron schedules, Secutils.dev lists five upcoming scheduled times for the specified schedule:
+
+![Secutils.dev UI - Custom schedule](/img/docs/guides_custom_tracker_schedule.png)
