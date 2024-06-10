@@ -252,7 +252,7 @@ Sometimes, your content extractor script can become large and complicated, makin
 
 ```javascript
 // This code assumes your script exports a function named `run`.
-return import('https://secutils-dev.github.io/secutils-sandbox/markdown-table/markdown-table.js')
+return import('https://secutils-dev.github.io/secutils-sandbox/content-extractor-scripts/markdown-table.js')
     .then((module) => module.run(context));
 ```
 
